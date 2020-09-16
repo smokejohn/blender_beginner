@@ -15,8 +15,8 @@ Blender Long Term Support LTS (Stable)
 Download the **Stable LTS version of blender** for Linux, Windows or Mac OS at
 the following url:
 
-`Blender Stable 2.8`_
-    **Current long term support version**
+| `Blender Stable 2.8`_
+| **Current long term support version**
 
 The Blender Stable can be installed via the Microsoft Windows Store on Windows
 machines, via Steam on Mac OS, Windows and Linux (not recommended) or via the
@@ -35,11 +35,11 @@ Blender Latest and Experimental
     of Blender like the *Latest Release version* or the *Experimental Version*
     use one of the links below:
 
-`Blender Latest 2.9`_
-    Latest release with the newest features, might have some bugs
+| `Blender Latest 2.9`_
+| Latest release with the newest features, might have some bugs
 
-`Blender Experimental 2.91`_
-    Experimental version, might be unstable, use to try latest features
+| `Blender Experimental 2.91`_
+| Experimental version, might be unstable, use to try latest features
 
 .. _Blender Stable 2.8: https://www.blender.org/download/lts
 .. _Blender Latest 2.9: https://www.blender.org.download/
@@ -78,12 +78,14 @@ you need to add it yourself.
     installed right next to each other!
 
 
-Application Settings location
------------------------------
+.. _app-settings-location-win:
+
+Application Settings location (windows)
+---------------------------------------
 Application Settings contain your userpreferences, bookmarks, scripts and addons
 
 Location:
-    C:\\Users\\[user]\\AppData\\Roaming\\Blender Foundation\\[version]\\
+    **C:/Users/[user]/AppData/Roaming/Blender Foundation/[version]/** 
 
 Linux
 =====
@@ -112,13 +114,14 @@ If you have snap installed on your distro you can visit `Canonical's snapcraft
 store <https://snapcraft.io/blender>`_ to install Blender and have it update
 automatically.
 
+.. _app-settings-location-linux:
 
-Application Settings location
------------------------------
+Application Settings location (linux)
+-------------------------------------
 Application Settings contain your userpreferences, bookmarks, scripts and addons
 
 Location:
-    ~/.config/blender/[version]/
+    **~/.config/blender/[version]/**
 
 Mac OS
 ======
@@ -143,11 +146,12 @@ PKG Installer
 Double click the .pkg-file to start the Installation Wizard. Follow it's instruction
 to the end and you will have successfully installed Blender.
 
+.. _app-settings-location-macos:
 
-Application Settings location
------------------------------
+Application Settings location (mac os)
+--------------------------------------
 Application Settings contain your userpreferences, bookmarks, scripts and addons
 
 Location:
-    ~/Library/Application Support/Blender/[version]/
+    **~/Library/Application Support/Blender/[version]/**
 

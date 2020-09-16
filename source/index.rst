@@ -10,7 +10,6 @@ Welcome to Blender Beginner!
    :maxdepth: 1
    :caption: First Steps
    :hidden:
-   :titlesonly:
 
    intro/setup
    intro/first_steps
