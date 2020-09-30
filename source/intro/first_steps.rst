@@ -76,6 +76,11 @@ Interface Sections names:
     #. **Timeline Panel** [Pink]
     #. **Topbar Menu** [Teal]
 
+**If you're looking for a more thorough overview of all the different user interface elements please refer to the
+official Blender Manual by clicking on the link below:**
+
+Blender Manual Link:
+    `Blender Manual | User Interface <https://docs.blender.org/manual/en/latest/interface/index.html>`_
 
 **********************
 3D Viewport Navigation

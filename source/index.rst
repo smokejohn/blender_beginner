@@ -21,6 +21,24 @@ Welcome to Blender Beginner!
    :hidden:
 
    lessons/lesson1
+   lessons/lesson2
    lessons/lesson3
-   ch1/test1
-   ch1/test2
+   lessons/lesson4
+   lessons/lesson5
+   lessons/lesson6
+   lessons/lesson7
+   lessons/lesson8
+   lessons/lesson9
+   lessons/lesson10
+   lessons/lesson11
+   lessons/lesson12
+   lessons/lesson13
+
+Getting Started
+---------------
+* :doc:`intro/setup`
+* :doc:`intro/first_steps`
+
+Links
+-----
+* `Blender Manual <https://docs.blender.org/manual/en/latest/index.html>`_
