@@ -1,6 +1,18 @@
-########
-Lesson 1
-########
+#####################
+Lesson 1 - Primitives
+#####################
+
+The goal of this lesson is to create a cyberpunk/scifi city block by arranging simple primitives.
+Basic Material creation and assignment to the primitives and simple lighting are also part of this
+exercise. The result should come somewhat close to the example below.
+
+Exercise Naming Convention
+    | Name every file you turn in for the assignment with the following naming convention:
+    | **lesson1_firstname_lastname.ext** (where .ext is the file extension e.g. .jpg, .png, .blend)
+
+Exercise submission:
+    * **Full HD Render 1920x1080 (Eevee)**
+    * **.blend-file**
 
 
 ***********************************
@@ -10,7 +22,16 @@ Selection, Duplication and Snapping
 
 Selection
 =========
-Object selection is explained very well in the official blender manual:
+| Object selection is explained very well in the official blender manual so refer to it for a detailed explanation. 
+| Here is a short table to get you started on the basics.
+
+=========================== ==========================================
+Hotkey                      Function
+=========================== ==========================================
+**LMouse**                  Select an object
+**Shift + LMouse**          Add or remove object from selection
+**Ctrl + LMouse-BoxSelect** Remove box selected objects from selection
+=========================== ==========================================
 
 Blender Manual Link:
     `Blender Manual | Selecting <https://docs.blender.org/manual/en/latest/interface/selecting.html>`_
@@ -37,61 +58,16 @@ Blender Manual Link:
 
 Snapping
 ========
-Snapping helps you place object more accurately by automatically aligning object features
+Snapping helps you place an object more accurately by automatically aligning object features
 to each other. The Blender manual is very thorough on this topic and explains it very well.
+
+============================= ==============================================================
+Hotkey                        Function
+============================= ==============================================================
+**Ctrl** (while transforming) Holding down Ctrl enables snapping until you release it again
+**Shift + Tab**               Enables or Disables Snapping globally
+**Ctrl + Shift + Tab**        Opens the Snap settings as a floating panel next to your mouse
+============================= ==============================================================
 
 Blender Manual Link:
     `Blender Manual | Snapping <https://docs.blender.org/manual/en/latest/editors/3dview/controls/snapping.html>`_
-
-
-*******************************
-Viewport Hotkeys and the Numpad
-*******************************
-A lot of blenders functionality is bound to the number keys on the numpad.
-Orthographic views, Isolation mode, Zoom to selected object, are all functions
-that are bound to numpad keys.
-
-============ ==========================================================================
-Hotkey       Function
-============ ==========================================================================
-**Numpad 1** Front Orthographic Viewport
-**Numpad 2** Rotate Viewport Down
-**Numpad 3** Right Orthographic Viewport
-**Numpad 4** Rotate Viewport Left
-**Numpad 5** Toggle between Perspective and Orthographic Viewport
-**Numpad 6** Rotate Viewport Right
-**Numpad 7** Top Orthographic Viewport
-**Numpad 8** Rotate Viewport Up
-**Numpad 9** Toggle Opposing Orthographic Viewport (Top/Bottom, Right/Left, Front/Back)
-**Numpad .** Zoom to selected objects
-**Numpad /** Isolate selected objects
-**Numpad -** Zoom out
-**Numpad +** Zoom in
-============ ==========================================================================
-
-
-For Those without Numpads
-=========================
-Now if you don't have a numpad because you are on a laptop or using a 60% or 80% keyboard,
-which are all missing the numpad, you can activate an addon that ships with blender
-to access all that functionality via a PIE-Menu.
-
-
-Activating the Viewport Pie Menu addon
---------------------------------------
-* **Edit >> Preferences...** or **F4 >> Preferences...**
-* Open the **Add-ons** tab by clicking on it on the left hand side
-* Use the search bar on the left to lookg for the **3D Viewport Pie Menus Addon**
-* Activate it by ticking on the **checkbox on the left of the Addon Entry**
-* Open the Addons Preferences by **clicking on the little triangle arrow left of the checkbox**
-* Disable/Uncheck all menus listed in the preferences except the very last one
-
-.. note:: 
-    After activating the addon and the **View Numpad Pie** you can call it up around your mouse
-    by pressing **[Hotkey: Alt + Q]**
-
-.. image:: ../_static/images/bl_preferences_addons_viewport_pie_numpad.png
-    :width: 500
-.. image:: ../_static/images/bl_addon_viewport_pie_numpad.png
-
-

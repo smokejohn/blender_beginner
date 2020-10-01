@@ -229,3 +229,56 @@ Transform-Tool |gizmo_transform| **RightMouse to cancel the transform**
     :alt: Animation of a 3D Cube being scaled in the 3D Viewport with the scale gizmo
 .. |gizmo_transform| image:: ../_static/images/bl_gizmos_transform.gif
     :alt: Animation of a 3D Cube being transformed in the 3D Viewport with the transform gizmo
+
+
+*******************************
+Viewport Hotkeys and the Numpad
+*******************************
+A lot of blenders functionality is bound to the number keys on the numpad.
+Orthographic views, Isolation mode, Zoom to selected object, are all functions
+that are bound to numpad keys.
+
+============ ==========================================================================
+Hotkey       Function
+============ ==========================================================================
+**Numpad 1** Front Orthographic Viewport
+**Numpad 2** Rotate Viewport Down
+**Numpad 3** Right Orthographic Viewport
+**Numpad 4** Rotate Viewport Left
+**Numpad 5** Toggle between Perspective and Orthographic Viewport
+**Numpad 6** Rotate Viewport Right
+**Numpad 7** Top Orthographic Viewport
+**Numpad 8** Rotate Viewport Up
+**Numpad 9** Toggle Opposing Orthographic Viewport (Top/Bottom, Right/Left, Front/Back)
+**Numpad .** Zoom to selected objects
+**Numpad /** Isolate selected objects
+**Numpad -** Zoom out
+**Numpad +** Zoom in
+============ ==========================================================================
+
+
+For Those without Numpads
+=========================
+Now if you don't have a numpad because you are on a laptop or using a 60% or 80% keyboard,
+which are all missing the numpad, you can activate an addon that ships with blender
+to access all that functionality via a PIE-Menu.
+
+
+Activating the Viewport Pie Menu addon
+--------------------------------------
+* **Edit >> Preferences...** or **F4 >> Preferences...**
+* Open the **Add-ons** tab by clicking on it on the left hand side
+* Use the search bar on the left to lookg for the **3D Viewport Pie Menus Addon**
+* Activate it by ticking on the **checkbox on the left of the Addon Entry**
+* Open the Addons Preferences by **clicking on the little triangle arrow left of the checkbox**
+* Disable/Uncheck all menus listed in the preferences except the very last one
+
+.. note:: 
+    After activating the addon and the **View Numpad Pie** you can call it up around your mouse
+    by pressing **[Hotkey: Alt + Q]**
+
+.. image:: ../_static/images/bl_preferences_addons_viewport_pie_numpad.png
+    :width: 500
+.. image:: ../_static/images/bl_addon_viewport_pie_numpad.png
+
+
