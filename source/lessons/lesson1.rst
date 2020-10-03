@@ -6,6 +6,9 @@ The goal of this lesson is to create a cyberpunk/scifi city block by arranging s
 Basic Material creation and assignment to the primitives and simple lighting are also part of this
 exercise. The result should come somewhat close to the example below.
 
+.. image:: ../_static/images/cityscape_scifi_eevee_1k_fog.png
+   :width: 600
+
 Exercise Naming Convention
     | Name every file you turn in for the assignment with the following naming convention:
     | **lesson1_firstname_lastname.ext** (where .ext is the file extension e.g. .jpg, .png, .blend)
