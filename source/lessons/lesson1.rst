@@ -14,13 +14,13 @@ Exercise Naming Convention
     | **lesson1_firstname_lastname.ext** (where .ext is the file extension e.g. .jpg, .png, .blend)
 
 Exercise submission:
-    * **Full HD Render 1920x1080 (Eevee)**
+    * **Render 1080x1080 PNG-File (Eevee)**
     * **.blend-file**
 
 
-***********************************
-Selection, Duplication and Snapping
-***********************************
+*****************************
+Tools needed for the exercise
+*****************************
 
 
 Selection
@@ -48,7 +48,7 @@ operators pay special attention to the active object versus the other selected o
 
 Duplication
 ===========
-To duplicate the seleced object simply press **Shift + D**. Blender will duplicate all
+To duplicate the selected object simply press **Shift + D**. Blender will duplicate all
 selected objects and put you into the gizmoless Move/Grab Object(s) mode where you can either
 place the object(s) where you want or cancel the transformation by clicking **RightMouse-Button**.
 The duplicate object will then be in the same position as the original and overlap it.
@@ -74,3 +74,134 @@ Hotkey                        Function
 
 Blender Manual Link:
     `Blender Manual | Snapping <https://docs.blender.org/manual/en/latest/editors/3dview/controls/snapping.html>`_
+
+
+The 3D Cursor
+=============
+The 3D Cursor is unique to blender and can speed up your workflow quite a bit. You can position it by
+holding **Shift + RMouse** and draging in the 3D View. You can even use snapping to snap it to object
+features.
+
+Positioning the cursor has quite a few benefits. When you add objects to your scene you can choose to
+spawn them at the cursor position instead of at the world center. You can also use the cursor as a
+transform, rotation or scaling center instead of the objects center of mass (Pivot Point).
+Quickly changing the pivot point is done by pressing **.** on your keyboard which will open
+the Pivot Point Pie Menu (shown below).
+
+.. image:: ../_static/images/bl_gui_pivotpoint_pie.png
+
+Blender Manual Links:
+    `Blender Manual | 3D Cursor <https://docs.blender.org/manual/en/latest/editors/3dview/3d_cursor.html>`_
+    `Blender Manual | Pivot Point <https://docs.blender.org/manual/en/latest/editors/3dview/controls/pivot_point/index.html>`_
+
+
+*********
+Materials
+*********
+
+
+Assigning New Materials to objects
+==================================
+To assign a material to an object click on it in the 3D View and then open the
+|props_material| **Material Properties** panel. You can add a new material to
+the object by clicking on the **New** Button highlighted in the image below.
+
+A **Principled BSDF Shader Material** will be assigned to your object. You
+can change its name in the text input highlighted in the image below.
+
+.. note::
+    For now we will ignore almost all of the settings on the material and just
+    use **BaseColor** (also highlighted below) to change our object color.
+
+.. image:: ../_static/images/bl_gui_props_material_new.png
+.. image:: ../_static/images/bl_gui_props_material_principled.png
+
+.. |props_material| image:: ../_static/images/bl_gui_props_material.png
+
+
+Assigning existing Materials
+============================
+I recommend naming all your materials and reuse them as much as possible,
+both because it doesn't clutter up your scene and also makes edits to the
+materials faster, if you have the same material assigned to multiple objects.
+
+To assign an existing material to an object click the Material dropdown
+Button (shown below) and choose one of the materials from the list that pops up.
+
+.. image:: ../_static/images/bl_gui_props_material_existing.png
+
+
+Emissive/Glowing Materials
+==========================
+To change a default **Principled BSDF Material** to a glowing/emissive **Emission Material**
+simply click on the **Surface Slot** of the material and change its surface type
+to **Emission** like in the image below. Adjust the Materials color and glow
+strength to your liking.
+
+.. image:: ../_static/images/bl_gui_props_material_surface_emission.png
+.. image:: ../_static/images/bl_gui_props_material_emission.png
+
+********
+Lighting
+********
+
+You can use any of the Light objects listed in the **Add Menu (Shift + A) >> Light Category**
+to light your cityscape. For more information on the different light types consult
+the official blender manual linked below.
+
+Blender Manual Link:
+    `Blender Manual | Light Objects <https://docs.blender.org/manual/en/latest/render/lights/light_object.html>`_
+
+*********
+Rendering
+*********
+
+Camera
+======
+To be able to make a final render we will need a camera in our scene that is set
+as default scene camera.
+
+Add one by pressing **Shift + A >> Camera** if this is the first camera you are
+adding to the scene it will automatically be set as default scene camera.
+
+.. note::
+    | If you have another camera in the scene and want to switch the default scene camera to your new one.
+    | Open the |props_scene| **Scene Properties** in the **Properties Panel** and set it to the camera you want.
+
+    .. image:: ../_static/images/bl_gui_props_scene_camera.png
+
+
+.. |props_scene| image:: ../_static/images/bl_gui_props_scene.png
+
+
+Output settings
+===============
+To set the output render size you will have to visit the |props_output| **Output Properties** Panel in the **Properties Panel**.
+
+**Set it to 1080x1080 pixels for this assignment**
+
+.. image:: ../_static/images/bl_gui_props_output_dimensions.png
+
+.. |props_output| image:: ../_static/images/bl_gui_props_output.png
+
+
+Render Settings
+===============
+We are rendering with the **EEVEE Realtime Render engine** so make sure it is set by
+opening the |props_render| **Render Properties** in the **Properties Panel**
+and setting the **Render Engine:** to **EEVEE**
+
+.. image:: ../_static/images/bl_gui_props_render_eevee_settings.png
+
+EEVEE's Render settings are then listed below in the same panel, where you can tweak
+its settings to your liking. I recommend enabling:
+
+* **Bloom**
+* **Ambient Occlusion**
+* **ScreenSpace Reflections**
+* **Increasing Shadow Map resolution**
+
+
+.. |props_render| image:: ../_static/images/bl_gui_props_render.png
+
+**Finally** we can start rendering our image by pressing **F12** or by selecting **Render >> Render Image** in the **Topbar Menus**
