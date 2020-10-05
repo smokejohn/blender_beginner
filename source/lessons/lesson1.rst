@@ -156,6 +156,23 @@ Blender Manual Link:
 Rendering
 *********
 
+
+Interactive Preview
+===================
+To get an idea of what your end result will look like while you are working on it
+and adjusting your settings. You can switch the **3D Viewport** to **Rendered Preview**
+by clicking the rightmost button in the **3D Viewport Shading menu in the top 
+right of the 3D Viewport** (Shown below).
+
+.. image:: ../_static/images/bl_gui_3dview_rendered.png
+
+You can also change to **Rendered Preview** by pressing **Hotkey: Z** on your
+keyboard to open the **Shading Pie Menu** and choose the **Rendered** option.
+
+.. image:: ../_static/images/bl_gui_pie_shading.png
+   :width: 300
+
+
 Camera
 ======
 To be able to make a final render we will need a camera in our scene that is set

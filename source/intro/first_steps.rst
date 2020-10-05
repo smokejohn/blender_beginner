@@ -111,7 +111,7 @@ Settings up a better startup file
 The default blender startup file contains the legendary default cube, a camera,
 and a sun lamp object. If you look at the *Outliner* on the right hand side you
 will see, that all these objects are grouped inside a Collection named
-'Collection' (very creative).
+'Collection'.
 
 
 Most of the time we will just delete these objects and the Collection when we
@@ -145,6 +145,17 @@ and is your one-stop-shop for adding objects to your current scene.
 
 You can also press the **Hotkey: Shift + A** to open the Add-Menu right where 
 your mousecursor is for quicker access.
+
+Once you selected an object to be created there will be a floating window in
+the **lower left corner of the 3D Viewport** that contains settings for the
+primitive. You can customize the primitive there.
+
+.. image:: ../_static/images/bl_gui_add_cube.png
+
+.. warning::
+    As soon as you click in the viewport the options window in the bottom
+    left will close and you will not be able to adjust your primitive anymore.
+    So make sure you have everything set up to your liking before you click anywhere.
 
 
 *******************
