@@ -2,6 +2,21 @@
 Lesson 2 - Simple Object Modeling
 #################################
 
+This time we are modeling simple everyday objects that you got on your
+desk at home or floating around in your house. We will learn the most
+often used modeling tools and other basic techniques that will enable
+you to complete this assignment. We will also check out the **Principled
+BSDF Material** a little bit more.
+
+.. tip::
+    If you need some inspiration for objects to model check out this
+    `Random Object Generator <https://www.bestrandoms.com/random-item-generator>`_
+
+.. image:: ../_static/images/simple_objects_floating.png
+   :width: 600
+
+This assignment is inspired by the amazing photography Carl Kleiner did for `Clas Ohlson <https://www.studiokleiner.com/commission/clas-olhson/>`_ , `FLOS <https://www.studiokleiner.com/commission/flos/>`_ and other floating object photography.
+
 
 **************
 What is a Mesh
@@ -20,8 +35,15 @@ these meshes into smaller polygons to get very smooth looking surfaces.
 
 Vertices, Edges, Faces, Polygons
 ================================
+| **Vertex Mode >> Hotkey: 1**
+| **Edge Mode >> Hotkey: 2**
+| **Face Mode >> Hotkey: 3**
+
 In blender we have the ability to change the **topology of a mesh** (how the mesh is constructed),
 by modifiying its vertices, edges, faces (triangles) or polygons (quadrilaterials and ngons).
+Once we are in **Edit Mode** we can switch between vertices, edges and faces by pressing
+the number keys 1,2 and 3. The most common modelling tools we will use in this lesson
+are described further below in the `Modeling Tools`_ section.
 
 .. figure:: ../_static/images/bl_mesh_components.png
 
@@ -58,16 +80,35 @@ might lead to some very weird lighting, as shown in the figure below.
 
    3D Plane lit from above getting shaded differently as its normals (pink) are adjusted
 
+
+Shade Smooth and Shade Flat
+---------------------------
+**Shade Smooth / Shade Flat >> Hotkey: RMouse in Object Mode**
+
 We can also use the fact that normals affect the shading of a 3D mesh to our advantage.
 By averaging the vertex normals of each face we can fake a smooth surface even though
-the mesh consists of flat polygons (The silhouette of the mesh will not improve). 
+the mesh consists of flat polygons (The silhouette of the mesh will not improve).
+You can switch between **Flat Shading/Faceted Shading** and **Smooth Shading** by
+**Right clicking in Object mode and selecting either from the context menu**.
 This method is very prevalent in games and realtime graphics, which makes it possible
 to have high fidelity graphics while keeping a lower polygon count.
 
-.. figure:: ../_static/images/bl_mesh_normals_smooth_faceted.png
-   :figwidth: 600
+.. image:: ../_static/images/bl_mesh_normals_smooth_faceted.png
+   :width: 600
    
-   3D sphere showing smooth and faceted shading and the underlying normals
+.. image:: ../_static/images/bl_gui_context_object_mode.png
+
+
+Auto Smooth
+-----------
+.. figure:: ../_static/images/bl_gui_props_object_data_normals.png
+   :align: right
+
+We can also change the normals of a mesh for each edge and define if the normals
+should be split or averaged/smoothed between the surrounding faces but this is
+only used when that degree of control is needed for the most part we can use
+**Auto Smooth** which is an option that splits or averages the normals based
+on the angle between the faces.
 
 
 **************
@@ -75,15 +116,15 @@ Modeling Tools
 **************
 **Switch between Edit and Object Mode | Hotkey: Tab**
 
+.. figure:: ../_static/images/bl_gui_3d_view_object_interaction.png
+   :align: right
+
 To access the modeling tools and be able to change the topology of the active objects
 mesh data we have to switch from **Object Mode to Edit Mode** you can do that by
 pressing **Hotkey: Tab** or by using the **object interaction mode dropdown** in
 the top left corner of the **3D Viewport**. Now you can access all of blenders
 mesh editing tools, some of which are described below. Once you are done editing
 the mesh you can press **Hotkey: Tab** again to go back to **Object Mode**.
-
-
-.. image:: ../_static/images/bl_gui_3d_view_object_interaction.png
 
 
 Loop Cut and Slide
@@ -131,8 +172,8 @@ Blender Manual Link:
 
 Extrude and Inset
 =================
-| **Extrude | Hotkey: E**
-| **Inset | Hotkey: I**
+| **Extrude >> Hotkey: E**
+| **Inset >> Hotkey: I**
 
 Extruding is one of the main ways to add geometry and simultaneously grow our object/mesh
 into a direction, it works on all mesh components (vertex, edge, face).
@@ -150,8 +191,8 @@ Blender Manual Link:
 
 Deleting and Welding/Merge
 ==========================
-| **Deleting Geometry | Hotkey: X**
-| **Welding/Merging | Hotkey: M**
+| **Deleting Geometry >> Hotkey: X**
+| **Welding/Merging >> Hotkey: M**
 
 We can also simply delete components of the mesh (vertex, edge, face) to create
 holes or prepare the geomtry for other operations by pressing **Hotkey: X**
@@ -164,3 +205,84 @@ into a single vertex.
 
 Blender Manual Link:
     `Blender Manual | Merge <https://docs.blender.org/manual/en/latest/modeling/meshes/editing/mesh/merge.html>`_
+
+Closing holes in meshes
+=======================
+In addition to welding vertices we can also close holes in meshes in other
+ways using other tools. Some of those tools don't have Hotkeys assigned to
+them so you can access them via the **context dropdown menus in the top left
+of the 3D Viewport**, alternatively you can use the **Operator search popup**
+**(Hotkey: Spacebar)** to search for the operator without having to navigate the
+menus.
+
+
+Create Face
+-----------
+| **Create Face >> Hotkey: F**
+
+Create face will construct a Polygon (Triangle, Quadrilateral or N-Sided Polygon [N-Gon])
+from the selected vertices or edges. It is up to you to subdivide large N-Gons
+in a smart way afterwards to prevent shading issues.
+
+.. image:: ../_static/images/bl_edit_face.gif
+   :width: 400
+
+Blender Manual Link:
+    `Blender Manual | New Face <https://docs.blender.org/manual/en/latest/modeling/meshes/editing/vertex/make_face_edge.html>`_
+
+
+Grid Fill
+---------
+| **Grid Fill >> Face >> GridFill**
+
+Grid fill will create a geometry patch consisting of multiple faces and will try
+to shape the patch so it follows the form of the surrounding geometry.
+
+.. image:: ../_static/images/bl_edit_gridfill.gif
+   :width: 400
+
+Blender Manual Link:
+    `Blender Manual | Grid Fill <https://docs.blender.org/manual/en/latest/modeling/meshes/editing/face/grid_fill.html>`_
+
+
+Bridge
+------
+| **Bridge >> Edge >> Bridge Edge Loops**
+
+Bridgeing can be used to close holes in meshes by selecting two groups of vertices or
+edges. Alternatively you can punch holes into a mesh by selecting two groups of faces
+and the Bridge tool will delete them and connect their borders. 
+
+.. image:: ../_static/images/bl_edit_bridge.gif
+   :width: 400
+
+Blender Manual Link:
+    `Blender Manual | Bridge <https://docs.blender.org/manual/en/latest/modeling/meshes/editing/edge/bridge_edge_loops.html>`_
+
+
+************************
+Principled BSDF Specular
+************************
+.. figure:: ../_static/images/bl_gui_props_material_principled_spec.png
+   :align: right
+
+For this assignment you can experiment with the **Principled BSDF Materials**
+**Roughness** and **Specular** parameters to change the surface look of your
+material. **Roughness** affects the surface roughness, a value of 0 will make your
+material very shiny/glossy while a value of 1 will make it very rough and dull.
+**Specular** controls how much the surface reflects light overall, a value of 0
+means the material will not reflect anything while a value of 1 will boost the
+amount of lightreflection the material has. The **Default value of 0.5** for
+the **Specular** parameter is physically correct for a large amount of Materials.
+
+.. figure:: ../_static/images/bl_material_roughness.gif
+   :figwidth: 300
+   :align: left
+
+   Material Roughness from 0 (glossy) to 1 (rough)
+
+.. figure:: ../_static/images/bl_material_specular.gif
+   :figwidth: 300
+   :align: center
+
+   Material Specular from 0 (no reflection) to 1 (very reflective)
