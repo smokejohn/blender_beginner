@@ -73,18 +73,94 @@ to have high fidelity graphics while keeping a lower polygon count.
 **************
 Modeling Tools
 **************
+**Switch between Edit and Object Mode | Hotkey: Tab**
 
-Add EdgeLoop
-============
+To access the modeling tools and be able to change the topology of the active objects
+mesh data we have to switch from **Object Mode to Edit Mode** you can do that by
+pressing **Hotkey: Tab** or by using the **object interaction mode dropdown** in
+the top left corner of the **3D Viewport**. Now you can access all of blenders
+mesh editing tools, some of which are described below. Once you are done editing
+the mesh you can press **Hotkey: Tab** again to go back to **Object Mode**.
+
+
+.. image:: ../_static/images/bl_gui_3d_view_object_interaction.png
+
+
+Loop Cut and Slide
+==================
+**Hotkey: Ctrl + R**
+
+The Loop Cut tool is a great tool to add additional edges that follow the current topology.
+It uses the concept of edge and face loops to determine where to cut and gives you the
+ability to slide the new edge loop around before inserting it. More information on the
+Loop Cut tool and what exactly face and edge loops are can be found by following the
+links to the blender manual below.
+
+.. image:: ../_static/images/bl_edit_loop_cut.gif
+
+Blender Manual Link:
+    `Blender Manual | Loop Cut <https://docs.blender.org/manual/en/latest/modeling/meshes/tools/loop.html>`_
+    `Blender Manual | Select Loops <https://docs.blender.org/manual/en/latest/modeling/meshes/selecting/loops.html>`_
+
 
 Knife/Cut
 =========
+**Hotkey: K**
 
+The Knife tool is great for cutting arbitrary shapes into the existing geometry.
+After you have set your cut by left clicking repeatedly confirm the cut by pressing Return/Enter.
+
+.. image:: ../_static/images/bl_edit_knife.gif
+
+Blender Manual Link:
+    `Blender Manual | Knife <https://docs.blender.org/manual/en/latest/modeling/meshes/tools/knife.html>`_
+
+    
 Bevel
 =====
+**Hotkey: Ctrl + B**
+
+The Edge Bevel Tool allows you to round of edges or chamfer them. It's one of
+the best tools for smoothing out the very harsh and unnatural edges of our meshes.
+
+.. image:: ../_static/images/bl_edit_bevel.gif
+
+Blender Manual Link:
+    `Blender Manual | Bevel <https://docs.blender.org/manual/en/latest/modeling/meshes/editing/edge/bevel.html>`_
+
 
 Extrude and Inset
 =================
+| **Extrude | Hotkey: E**
+| **Inset | Hotkey: I**
 
-Welding
-=======
+Extruding is one of the main ways to add geometry and simultaneously grow our object/mesh
+into a direction, it works on all mesh components (vertex, edge, face).
+
+Inset is a great to to create slots or prepare geomtry for extrusion. It's also one
+of the tools that will be very useful later on when we look at subdivision surface
+modeling.
+
+.. image:: ../_static/images/bl_edit_extrude.gif
+.. image:: ../_static/images/bl_edit_inset.gif
+
+Blender Manual Link:
+    * `Blender Manual | Extrude <https://docs.blender.org/manual/en/latest/modeling/meshes/tools/extrude_region.html>`_
+    * `Blender Manual | Inset <https://docs.blender.org/manual/en/latest/modeling/meshes/editing/face/inset_faces.html>`_
+
+Deleting and Welding/Merge
+==========================
+| **Deleting Geometry | Hotkey: X**
+| **Welding/Merging | Hotkey: M**
+
+We can also simply delete components of the mesh (vertex, edge, face) to create
+holes or prepare the geomtry for other operations by pressing **Hotkey: X**
+
+Sometimes we have holes in our meshes or wish to merge together vertices to create
+spikes or other shapes. The Merge tools let you close meshes or weld together vertices
+into a single vertex.
+
+.. image:: ../_static/images/bl_edit_weld.gif
+
+Blender Manual Link:
+    `Blender Manual | Merge <https://docs.blender.org/manual/en/latest/modeling/meshes/editing/mesh/merge.html>`_
