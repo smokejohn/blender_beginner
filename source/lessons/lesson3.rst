@@ -3,6 +3,72 @@ Lesson 3 - Advanced Modeling
 ############################
 
 
+********************
+Collections / Groups
+********************
+We can use collection to organize our blender scene and group multiple objects
+that belong together. You can navigate your scenes **Collections** in the 
+**Outliner** at the top right in the Blender UI. To add objects to a collection
+simply **Drag and Drop them onto the Collection in the Outliner**.
+
+To make sure all newly created object are automatically added to the collection
+you want **click on the box icon next to the name of the collection to make it
+the active collection** (In the image below the *Crate_03* Collection is active)
+
+.. figure:: ../_static/images/bl_gui_outliner_collections.png
+   
+   Blender outline with the button to create a new collection highlighted in yellow
+
+Blender Manual Link:
+    `Blender Manual | Collections <https://docs.blender.org/manual/en/latest/scene_layout/collections/collections.html>`_
+
+**************************************************
+Non-destructive / Procedural Modelling (Modifiers)
+**************************************************
+.. figure:: ../_static/images/bl_gui_modifier_panel.png
+   :align: right
+
+   Modifier Panel for a cube object
+
+While all the changes to the mesh we have been doing in edit mode are final
+and are hard to change once we exit the modeling tool, there are other ways
+to modify geometry that keep the operations adjustable. This way of modelling
+is often referred to as **Procedural Modelling** or **Non-destructive Editing**
+because we can change the parameters of the modeling operators at any time.
+
+Blender uses **Modifiers** which can be added to objects to implement this
+functionality. The |props_modifier| **Modifier Panel** in the **Properties
+Panel** on the right hand side of Blenders UI lets you add modifiers to the
+currently active object.
+
+
+.. figure:: ../_static/images/bl_gui_modifier_list.png
+
+   List of all available modifiers in blender
+
+**We will use the following modifiers in this lesson:**
+
+* Mirror
+* Boolean
+* Solidify
+* Bevel
+  
+.. warning::
+    Some modifiers may behave very weird if you have been scaling your objects
+    in object mode. That's because their settings sometimes depend on the object
+    scale. To prevent unexpected results you should use the **Apply Scale** 
+    command to reset the objects scale back to 1.0.
+
+    | **Check object Scale >> 3D Viewport Sidebar (Hotkey: N) >> Item tab >> Scale**
+    | **Apply Scale >> Hotkey: Ctrl + A**
+
+    .. image:: ../_static/images/bl_gui_3dview_item.png
+    .. image:: ../_static/images/bl_gui_apply_scale.png
+
+Blender Manual Link:
+    `Blender Manual | Modifiers <https://docs.blender.org/manual/en/latest/modeling/modifiers/index.html>`_
+
+
 ***************************
 Constructive Solid Geometry
 ***************************
@@ -26,7 +92,6 @@ Boolean Union (**∪**)    Boolean Difference (**-**)    Boolean Intersection (*
 |csg_union|              |csg_difference|              |csg_intersect|
 Union of Cube and Sphere Difference of Cube and Sphere Intersection of Cube and Sphere
 ======================== ============================= ===============================
-
 
 
 .. |csg_union| image:: ../_static/images/bl_csg_union.png
@@ -116,7 +181,7 @@ The process for booling a cube and a sphere is now way faster and easier:
 #. Select the appropriate boolean operation from the menu
 
 .. note::
-    Brush Boolean keeps the boolean operation interactive and you can still move
-    the cutter while Auto Boolean will apply the boolean and only leave the resulting
+    **Brush Boolean** keeps the boolean operation interactive and you can still move
+    the cutter while **Auto Boolean** will apply the boolean and only leave the resulting
     mesh behind. Therefore if only choose Auto Boolean if you are sure you don't want
     to tweak the result.

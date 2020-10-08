@@ -53,6 +53,15 @@ selected objects and put you into the gizmoless Move/Grab Object(s) mode where y
 place the object(s) where you want or cancel the transformation by clicking **RightMouse-Button**.
 The duplicate object will then be in the same position as the original and overlap it.
 
+.. tip::
+   If you want to rapidly duplicate objects you can repeat your last duplication and move
+   by pressing **Hotkey: Shift + R** (This hotkey will repeat the last action you performed)
+
+   .. figure:: ../_static/images/bl_ops_repeat_last.gif
+      :figwidth: 300
+
+      Duplication (Shift + D) and move followed by Repeat Last (Shift + R)
+
 For more information please refer to the official blender manual:
 
 Blender Manual Link:
@@ -78,17 +87,20 @@ Blender Manual Link:
 
 The 3D Cursor
 =============
-The 3D Cursor is unique to blender and can speed up your workflow quite a bit. You can position it by
-holding **Shift + RMouse** and draging in the 3D View. You can even use snapping to snap it to object
-features.
+The 3D Cursor is unique to blender and can speed up your workflow quite a bit.
+You can position it by holding **Shift + RMouse** and draging in the 3D View.
+You can even use snapping to snap it to object features.
 
-Positioning the cursor has quite a few benefits. When you add objects to your scene you can choose to
-spawn them at the cursor position instead of at the world center. You can also use the cursor as a
-transform, rotation or scaling center instead of the objects center of mass (Pivot Point).
-Quickly changing the pivot point is done by pressing **.** on your keyboard which will open
-the Pivot Point Pie Menu (shown below).
+Positioning the cursor has quite a few benefits. When you add objects to your
+scene you can choose to spawn them at the cursor position instead of at the
+world center. You can also use the cursor as a transform, rotation or scaling
+center instead of the objects center of mass (Pivot Point).
 
-.. image:: ../_static/images/bl_gui_pivotpoint_pie.png
+.. tip:: 
+   Quickly changing the pivot point is done by pressing **Hotkey: . (Dot)** on
+   your keyboard which will open the Pivot Point Pie Menu (shown below).
+
+   .. image:: ../_static/images/bl_gui_pivotpoint_pie.png
 
 Blender Manual Links:
     `Blender Manual | 3D Cursor <https://docs.blender.org/manual/en/latest/editors/3dview/3d_cursor.html>`_

@@ -111,6 +111,34 @@ only used when that degree of control is needed for the most part we can use
 on the angle between the faces.
 
 
+***************
+Selection Tools
+***************
+Selecting vertices, edges and faces happens often while modeling so we should
+try to be efficient and quick with it. As always there is more information
+to be found in the official blender manual linked below this hotkey list.
+
+=================== ===============================================
+Hotkey              Action
+=================== ===============================================
+LMouse              Select vertex, edge, face
+Shift + LMouse      Add or remove vertex, edge, face from selection
+Ctrl + LMouse       Point to Point selection 
+Alt + LMouse        Edge/Face Loop Selection
+Ctrl + Alt + LMouse Edge/Face Ring Selection
+A                   Select All
+Alt + A             Deselect All
+Ctrl + I            Invert current selection
+Ctrl + Numpad+      Grow current selection outwards
+Ctrl + Numpad-      Shrink current selection inwards
+L                   Select connected Geometry
+Alt + Z             X-Ray-Mode (lets you select occluded geometry)
+=================== ===============================================
+
+Blender Manual Link:
+    `Blender Manual | Selection <https://docs.blender.org/manual/en/2.82/modeling/meshes/selecting.html>`_
+
+
 **************
 Modeling Tools
 **************
