@@ -63,6 +63,25 @@ direction the face is pointing**.
 
    3D Sphere with its smoothed normals displayed in pink 
 
+.. tip::
+    Faces with normals pointing in the wrong direction can be problematic in
+    many cases, so it's important to check that our faces are "looking" in 
+    the proper direction.
+    Blender has a quick overlay view mode that colors a polygons frontface
+    blue and its backface red, which is very useful for finding objects 
+    where all faces are pointing inwards.
+
+    **It can be enabled in the Viewport Overlays Menu in the top right of the 3D Viewport**
+
+    To flip a faces orientation select it in **Edit Mode** and press **Hotkey: Alt + N** and
+    select **Flip** to reverse its normal.
+
+    .. image:: ../_static/images/bl_gui_3dview_faceorientation_example.png
+       :width: 400
+
+    .. image:: ../_static/images/bl_gui_3dview_faceorientation.png
+
+
 
 How Normals affect Shading
 --------------------------

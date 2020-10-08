@@ -2,6 +2,21 @@
 Lesson 3 - Advanced Modeling
 ############################
 
+In this lesson we are going to do some concept art, but we are not going 
+to draw, we are going to model it and then render it to look like
+concept art. The goal is to create 5 Scifi-Container designs using the
+methods and techniques shown in this lesson and listed below. An example
+of how the end result can look like just below this text.
+
+**We will be looking at following topics:**
+
+* Basic Scene Management with collections
+* Non-destructive / Procedural Modelling techniques
+* Constructive Solid Geometry (CSG/Booleans)
+* Freestyle line rendering
+
+.. image:: ../_static/images/crate_designs.png
+   :width: 600
 
 ********************
 Collections / Groups
@@ -185,3 +200,23 @@ The process for booling a cube and a sphere is now way faster and easier:
     the cutter while **Auto Boolean** will apply the boolean and only leave the resulting
     mesh behind. Therefore if only choose Auto Boolean if you are sure you don't want
     to tweak the result.
+
+
+***********************
+Freestyle Line Renderer
+***********************
+Blenders Freestyle line renderer lets you create Non-Photorealistic-Renders (NPR).
+It is very customizable and has a huge amount of parameters you can tweak to create
+very unique looking lineart, that can look very close to a handdrawn style. We will
+be using very basic settings to achieve the look in the image below, but feel free
+to experiment.
+
+.. image:: ../_static/images/crate_design_04.png
+   :width: 600
+
+To activate the **Freestyle Renderer** open the 
+The settings used for the shot above are in the screenshots below:
+
+.. image:: ../_static/images/bl_gui_props_render_freestyle.png
+.. image:: ../_static/images/bl_gui_props_viewlayer_freestyle.png
+.. image:: ../_static/images/bl_gui_props_viewlayer_freestyle_linestyle.png
