@@ -21,23 +21,27 @@ Welcome to Blender Beginner!
    :hidden:
 
    lessons/lesson1
-   lessons/lesson2
-   lessons/lesson3
-   lessons/lesson4
-   lessons/lesson5
-   lessons/lesson6
-   lessons/lesson7
-   lessons/lesson8
-   lessons/lesson9
-   lessons/lesson10
-   lessons/lesson11
-   lessons/lesson12
-   lessons/lesson13
+.. lessons/lesson2
+.. lessons/lesson3
+.. lessons/lesson4
+.. lessons/lesson5
+.. lessons/lesson6
+.. lessons/lesson7
+.. lessons/lesson8
+.. lessons/lesson9
+.. lessons/lesson10
+.. lessons/lesson11
+.. lessons/lesson12
+.. lessons/lesson13
 
 Getting Started
 ---------------
 * :doc:`intro/setup`
 * :doc:`intro/first_steps`
+
+Lessons
+-------
+* :doc:`lessons/lesson1`
 
 Links
 -----
