@@ -157,12 +157,29 @@ strength to your liking.
 Lighting
 ********
 
+
+Light sources
+=============
 You can use any of the Light objects listed in the **Add Menu (Shift + A) >> Light Category**
 to light your cityscape. For more information on the different light types consult
 the official blender manual linked below.
 
 Blender Manual Link:
     `Blender Manual | Light Objects <https://docs.blender.org/manual/en/latest/render/lights/light_object.html>`_
+
+
+The World Environment
+=====================
+The **World Environment** also factors into how our scene gets lit. You can adjust
+your Worlds settings by navigating to the |props_world| **World Properties** 
+located in the **Properties Panel** on the right hand side of Blenders UI.
+
+.. image:: ../_static/images/bl_gui_props_world_environment.png
+
+.. |props_world| image:: ../_static/images/bl_gui_props_world.png
+
+Blender Manual Link:
+    `Blender Manual | World <https://docs.blender.org/manual/en/2.79/render/cycles/world.html>`_
 
 *********
 Rendering
