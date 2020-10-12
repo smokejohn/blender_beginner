@@ -242,6 +242,23 @@ Transform-Tool |gizmo_transform| **RightMouse to cancel the transform**
     :alt: Animation of a 3D Cube being transformed in the 3D Viewport with the transform gizmo
 
 
+Precise Manipulation
+====================
+While you are in you are in one of the gizmoless modal transform modes (**Hotkeys: G, R, S**)
+you can type in number values to get a precise transform, rotation or scaling. This also
+works if you use the gizmos to manipulate objects but you will have to hold down the
+**LMouse-Button** the whole time.
+
+.. tip::
+    Another great way to see the Location, Rotation, Scale and Dimensions of your active object
+    is to open the **3D Viewports** **Sidebar Menu (Hotkey: N)**.
+    The **Item** submenu in the **Sidebar Menu** contains multiple slider/number inputs
+    that let you accurately position, rotate and scale your object (shown below).
+
+    .. image:: ../_static/images/bl_gui_3dview_contextmenu.png
+
+
+
 *******************************
 Viewport Hotkeys and the Numpad
 *******************************
@@ -271,9 +288,19 @@ Hotkey       Function
 For Those without Numpads
 =========================
 Now if you don't have a numpad because you are on a laptop or using a 60% or 80% keyboard,
-which are all missing the numpad, you can activate an addon that ships with blender
-to access all that functionality via a PIE-Menu.
+which are all missing the numpad, you can either, tell blender to treat your
+normal number keys as if they were your numpad or activate an addon that ships
+with blender to access all that functionality via a PIE-Menu.
 
+**Both of those ways are described below**
+
+Emulating the Numpad with the numberkeys
+----------------------------------------
+* Open the Preferences with **Edit >> Preferences...** or **F4 >> Preferences...**
+* Click on the **Input Tab** on the left
+* Tick the **Emulate Numpad Checkbox** all the way at the top
+
+.. image:: ../_static/images/bl_preferences_emulate_numpad.png
 
 Activating the Viewport Pie Menu addon
 --------------------------------------

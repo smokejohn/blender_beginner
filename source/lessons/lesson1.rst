@@ -110,6 +110,22 @@ Blender Manual Links:
 *********
 Materials
 *********
+.. note::
+    To be able to see materials in our **3D Viewport** we need to make sure we
+    are in the proper **Viewport Shading Mode**. Materials are only getting
+    displayed in **Material Preview Mode** and **Rendered Preview Mode**.
+    The buttons to switch between the different shading modes are in the 
+    top right corner of the **3D Viewport**
+
+    .. image:: ../_static/images/bl_gui_3dview_viewportshadingmodes.png
+
+    **In order left to right:**
+
+    #. **Wireframe** (Only Mesh edges visible) 
+    #. **Solid** (Object surfaces visible shaded in grey)
+    #. **Material Preview** (Shows Materials in a default light setup and is active in the screenshot above)
+    #. **Rendered Preview** (Shows Materials affected by our Scene Lights)
+
 
 
 Assigning New Materials to objects
@@ -164,6 +180,19 @@ You can use any of the Light objects listed in the **Add Menu (Shift + A) >> Lig
 to light your cityscape. For more information on the different light types consult
 the official blender manual linked below.
 
+**Light sources available:**
+
+* Point Light (Use for spherical light sources)
+* Sun / Directional Light (Great for distant light sources like sun or moon)
+* Spot Light (Cone shaped directed light, great for car headlights and other directional lights)
+* Area Light (Softbox light, very smooth and diffuse shadows the larger the light source)
+
+The **Settings for a Light Object** can be found in the |props_object_data_light| **Object Data Properties**
+which are located in the **Properties Panel** on the right hand side of the Blender UI.
+
+.. image:: ../_static/images/bl_gui_props_object_data_light_sun.png
+.. |props_object_data_light| image:: ../_static/images/bl_gui_props_object_data_light.png
+
 Blender Manual Link:
     `Blender Manual | Light Objects <https://docs.blender.org/manual/en/latest/render/lights/light_object.html>`_
 
@@ -173,6 +202,8 @@ The World Environment
 The **World Environment** also factors into how our scene gets lit. You can adjust
 your Worlds settings by navigating to the |props_world| **World Properties** 
 located in the **Properties Panel** on the right hand side of Blenders UI.
+I recommend settings this to a dark blue color to simulate a night scene for the
+assignment for this lesson.
 
 .. image:: ../_static/images/bl_gui_props_world_environment.png
 
@@ -210,6 +241,20 @@ as default scene camera.
 Add one by pressing **Shift + A >> Camera** if this is the first camera you are
 adding to the scene it will automatically be set as default scene camera.
 
+**Useful hotkeys for Camera usage:**
+
+===================== =========================================================================
+Hotkey                Function
+===================== =========================================================================
+Numpad 0              Look through the **Scene Camera** (pressing it again returns to viewport)
+Ctrl + Numpad 0       Sets the current object as **Scene Camera**
+Ctrl + Alt + Numpad 0 Aligns the selected camera to the viewport
+===================== =========================================================================
+
+.. figure:: ../_static/images/bl_gui_3dview_view_alignactivecameratoview.png
+
+    Location of the Align Active Camera to View command (Hotkey: Ctrl+Alt+Numpad0) in the **3D Viewports View Menu**
+
 .. note::
     | If you have another camera in the scene and want to switch the default scene camera to your new one.
     | Open the |props_scene| **Scene Properties** in the **Properties Panel** and set it to the camera you want.
@@ -245,8 +290,10 @@ its settings to your liking. I recommend enabling:
 * **Bloom**
 * **Ambient Occlusion**
 * **ScreenSpace Reflections**
-* **Increasing Shadow Map resolution**
+* **Increasing Shadow Map resolution (If your pc can handle it)**
 
+Blender Manual Link:
+    `Blender Manual | Eevee <https://docs.blender.org/manual/en/latest/render/eevee/index.html>`_
 
 .. |props_render| image:: ../_static/images/bl_gui_props_render.png
 
