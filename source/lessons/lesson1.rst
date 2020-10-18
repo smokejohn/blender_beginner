@@ -15,7 +15,6 @@ Exercise Naming Convention
 
 Exercise submission:
     * **Render 1080x1080 PNG-File (Eevee)**
-    * **.blend-file**
 
 
 *****************************
@@ -157,6 +156,17 @@ To assign an existing material to an object click the Material dropdown
 Button (shown below) and choose one of the materials from the list that pops up.
 
 .. image:: ../_static/images/bl_gui_props_material_existing.png
+
+.. tip::
+   If you have a lot of objects that you want to assign the same material to
+   you can do that in a single step aswell.
+
+    #. Select all Objects you want to apply the material to (Shift + LMouse)
+    #. Select an object that has the material applied you want to apply to all other objects
+    #. Press **Hotkey: Ctrl + L** and select **Material**
+
+    .. image:: ../_static/images/bl_make_links_material.gif
+
 
 
 Emissive/Glowing Materials

@@ -21,7 +21,7 @@ Welcome to Blender Beginner!
    :hidden:
 
    lessons/lesson1
-.. lessons/lesson2
+   lessons/lesson2
 .. lessons/lesson3
 .. lessons/lesson4
 .. lessons/lesson5

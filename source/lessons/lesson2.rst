@@ -50,6 +50,17 @@ are described further below in the `Modeling Tools`_ section.
    vertices, edges, faces and polygons of a cube
 
 
+Non-Manifold Objects and problematic Geometry
+=============================================
+While we create and edit meshes it is possible to create geometry that could lead
+to problems down the line. **Non-manifold geometry** for example **can't be unfolded/unwrapped
+into flat 2D planes** during the **UV-Unwrapping phase** later and might be problematic to
+texture/paint on. **We should avoid creating Non-manifold and other problematic geometry
+at all cost. You can find examples of Non-manifold geometry below.**
+
+.. image:: ../_static/images/bl_mesh_non_manifolds.png
+   :width: 1200
+
 Normals
 =======
 A normal is a vector that is perpendicular to a given object. In our case there are 
@@ -154,6 +165,12 @@ L                   Select connected Geometry
 Alt + Z             X-Ray-Mode (lets you select occluded geometry)
 =================== ===============================================
 
+.. tip::
+    Pressing **Hotkey: Alt + Z** to enter X-Ray-Mode is very useful for 
+    selecting different mesh elements (vertices, edges, faces). X-Ray-Mode
+    selects all elements in a rectangular marquee selection box (LMouse-Drag Select).
+    even if they would normally be concealed (I.e blocked/hidden) by other mesh elements.
+
 Blender Manual Link:
     `Blender Manual | Selection <https://docs.blender.org/manual/en/2.82/modeling/meshes/selecting.html>`_
 
@@ -185,6 +202,10 @@ Loop Cut tool and what exactly face and edge loops are can be found by following
 links to the blender manual below.
 
 .. image:: ../_static/images/bl_edit_loop_cut.gif
+
+.. tip::
+    | If you want to slide edges around there are seperate tools for that called **Vertex Slide and Edge Slide**
+    | You can activate the Slide tool by selecting an edge or vertex and then pressing **Hotkey: GG (pressing G twice)**.
 
 Blender Manual Link:
     `Blender Manual | Loop Cut <https://docs.blender.org/manual/en/latest/modeling/meshes/tools/loop.html>`_
@@ -333,3 +354,40 @@ the **Specular** parameter is physically correct for a large amount of Materials
    :align: center
 
    Material Specular from 0 (no reflection) to 1 (very reflective)
+
+
+*************
+Volume Shader
+*************
+To get the **glowing effect on our light sources without having to place objects
+with an emission shader** we can also place a **Volume Shader on our scene
+to simulate particles/smoke in the air.**
+
+Contrary to a **Surface Shader (e.g. Principled BSDF) which defines the look of the 
+3D Mesh Surface** a **Volume shader works on the Volume of a 3D Mesh (I.e only inside the Mesh)**
+
+So we have to create a 3D Mesh that represents our Volume and then assign a **Principled Volume Shader**
+to it. **Follow these steps to do exactly that (click on the images to see them at full resolution)**
+
+#. Create a Cube primitive **[Shift + A >> Mesh >> Cube]**
+#. Scale it up so it covers your scene objects and light sources
+#. Select the Cube, open the |props_material| **Material Properties** in the **Properties Panel** and add a new Material by clicking on **+New**
+#. Open the **Surface Rollout** and click on the **Surface Slot** and choose **Remove** on the top right
+   
+   .. image:: ../_static/images/bl_gui_props_material_surface_slot.png
+      :width: 100
+#. Open the **Volume Rollout** right below the **Surface Rollout**, click on the **Volume Slot** and select the **Principled Volume**
+
+   .. image:: ../_static/images/bl_gui_props_material_volume_principled.png
+      :width: 100
+#. Go to the |props_render| **Render Properties** in the **Properties Panel** on the right side of Blenders UI
+   and enable **Volumetric Lighting** in the **Volumetric Rollout** of **Eevee's Render Properties**
+
+   .. image:: ../_static/images/bl_gui_props_render_eevee_volumetrics.png
+      :width: 100
+#. Feel free to experiment with the Settings of the **Principled Volume Shader** that I highlighted in yellow at step 5 to get different effects
+   or copy mine for a very slight glow.
+
+
+.. |props_material| image:: ../_static/images/bl_gui_props_material.png
+.. |props_render| image:: ../_static/images/bl_gui_props_render.png
