@@ -85,7 +85,8 @@ direction the face is pointing**.
     **It can be enabled in the Viewport Overlays Menu in the top right of the 3D Viewport**
 
     To flip a faces orientation select it in **Edit Mode** and press **Hotkey: Alt + N** and
-    select **Flip** to reverse its normal.
+    select **Flip** to reverse its normal. Alternatively you can press **Hotkey: Shift + N**
+    to let blender try to fix the problematic areas himself.
 
     .. image:: ../_static/images/bl_gui_3dview_faceorientation_example.png
        :width: 400
@@ -280,7 +281,7 @@ In addition to welding vertices we can also close holes in meshes in other
 ways using other tools. Some of those tools don't have Hotkeys assigned to
 them so you can access them via the **context dropdown menus in the top left
 of the 3D Viewport**, alternatively you can use the **Operator search popup**
-**(Hotkey: Spacebar)** to search for the operator without having to navigate the
+**(Hotkey: F3)** to search for the operator without having to navigate the
 menus.
 
 

@@ -307,4 +307,15 @@ Blender Manual Link:
 
 .. |props_render| image:: ../_static/images/bl_gui_props_render.png
 
-**Finally** we can start rendering our image by pressing **F12** or by selecting **Render >> Render Image** in the **Topbar Menus**
+Rendering the Image
+-------------------
+**Finally** we can start rendering our image by pressing **F12** or by selecting **Render >> Render Image** in the **Topbar Menus**.
+A new floating window the **Blender Render** window will appear and your pc will calculate the final image.
+
+Once the render is completed you can save the Final Image by clicking on **Image >> Save As...** or by pressing **Hotkey: Shift + Alt + S**.
+Blender will ask you for the location and name of the image, once you navigated to the proper folder and named your output you are done
+with this assignment.
+
+.. image:: ../_static/images/bl_gui_render_save_image.png
+
+
