@@ -14,9 +14,11 @@ of how the end result can look like just below this text.
 * Non-destructive / Procedural Modelling techniques
 * Constructive Solid Geometry (CSG/Booleans)
 * Freestyle line rendering
+* Subdivision Surface Modeling
 
 .. image:: ../_static/images/crate_designs.png
    :width: 600
+
 
 ********************
 Collections / Groups
@@ -36,6 +38,7 @@ the active collection** (In the image below the *Crate_03* Collection is active)
 
 Blender Manual Link:
     `Blender Manual | Collections <https://docs.blender.org/manual/en/latest/scene_layout/collections/collections.html>`_
+
 
 **************************************************
 Non-destructive / Procedural Modelling (Modifiers)
@@ -67,6 +70,7 @@ currently active object.
 * Boolean
 * Solidify
 * Bevel
+* Subdivision Surface
   
 .. warning::
     Some modifiers may behave very weird if you have been scaling your objects
@@ -214,9 +218,35 @@ to experiment.
 .. image:: ../_static/images/crate_design_04.png
    :width: 600
 
-To activate the **Freestyle Renderer** open the 
-The settings used for the shot above are in the screenshots below:
+To activate the **Freestyle Renderer** open the |props_render| **Render Properties Panel**
+in the **Properties Panel** on the right hand side and scroll down to the **Freestyle Rollout**
+and tick the checkbox.
 
 .. image:: ../_static/images/bl_gui_props_render_freestyle.png
+
+All settings for the **Freestyle Renderer** are in the |props_viewlayer| **Viewlayer Properties**
+in the **Properties Panel** at the very bottom of the Viewlayer Panel. I recommend bumping the
+**Crease Angle** setting up to **160 Degrees** so even very shallow changes in geometry are getting
+drawn as outlines.
+
+To Match the look of my example you can adjust your settings until they reflect those in the screenshots below:
+
 .. image:: ../_static/images/bl_gui_props_viewlayer_freestyle.png
 .. image:: ../_static/images/bl_gui_props_viewlayer_freestyle_linestyle.png
+
+.. |props_render| image:: ../_static/images/bl_gui_props_render.png
+.. |props_viewlayer| image:: ../_static/images/bl_gui_props_viewlayer.png
+
+
+*****************************
+Subdivision Surface Modelling
+*****************************
+To get smooth looking surfaces instead of the faceted or blocky representations
+of objects we have been creating until now we can leverage the **Subdivision
+Surface Modifier**.
+
+Algorithm - What is happening under the hood
+============================================
+
+Topology for subdivision surfaces
+=================================
