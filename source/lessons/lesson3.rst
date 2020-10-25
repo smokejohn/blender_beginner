@@ -254,7 +254,7 @@ or satisfying to look at, if it is applied correctly and in conjunction with the
 principles explained below.
 
 Ratio at which the Elements should occur
-========================================
+----------------------------------------
 This design theory also dictates at which ratio the Big, Medium and
 Small Elements should appear in relation to each other.
 
@@ -264,7 +264,7 @@ takes up 30%**. Continuing with this the Small Shapes take up 30% of the space
 the Medium Shapes leaving 70% uncluttered.
 
 Variation and Clustering
-========================
+------------------------
 Too much of the same shape is boring, so try to have variation in the size of
 the shapes in all three categories (Big, Medium, Small). When you place a lot
 of small shapes, instead of positioning them evenly spaced try to cluster them
