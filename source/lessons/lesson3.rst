@@ -21,7 +21,7 @@ of how the end result can look like just below this text.
 * Design Theory
     * Big, Medium, Small
     * Gestalt Principles
-    * Dynamic Symmetry
+    * Dynamic Symmetry and Rule of thirds
 
 *********
 3D Topics
@@ -29,18 +29,18 @@ of how the end result can look like just below this text.
 
 Collections / Groups
 ====================
-We can use collection to organize our blender scene and group multiple objects
+We can use collections to organize our blender scene and group multiple objects
 that belong together. You can navigate your scenes **Collections** in the 
 **Outliner** at the top right in the Blender UI. To add objects to a collection
 simply **Drag and Drop them onto the Collection in the Outliner**.
 
-To make sure all newly created object are automatically added to the collection
+To make sure all newly created objects are automatically added to the collection
 you want **click on the box icon next to the name of the collection to make it
 the active collection** (In the image below the *Crate_03* Collection is active)
 
 .. figure:: ../_static/images/bl_gui_outliner_collections.png
    
-   Blender outline with the button to create a new collection highlighted in yellow
+   Blender Outliner with the button to create a new collection highlighted in yellow
 
 Blender Manual Link:
     `Blender Manual | Collections <https://docs.blender.org/manual/en/latest/scene_layout/collections/collections.html>`_
@@ -247,19 +247,20 @@ Design Theory
 
 Big, Medium, Small (Primary, Secondary, Tertiary)
 =================================================
-Big, Medium, Small or Primary, Secondary, Tertiary Shapes or 1st, 2nd, 3rd Read
-are all names for the way we can structure our designs to make it easier to understand,
-more pleasing to the eye and more interesting. It's what makes a design interesting, cool
-satisfying to look at, if it is applied correctly and in conjunction with the other
+**Big, Medium, Small** or **Primary, Secondary, Tertiary Shapes** or **1st, 2nd, 3rd Read**
+are all names for the way we can **structure our designs to make it easier to understand,
+more pleasing to the eye and more interesting**. It's what makes a design interesting, cool
+or satisfying to look at, if it is applied correctly and in conjunction with the other
 principles explained below.
 
-Ratio at which the Element should occur
-=======================================
+Ratio at which the Elements should occur
+========================================
 This design theory also dictates at which ratio the Big, Medium and
-Small Elements should appear in relation to each other. This ratio can vary
-a little bit but most of the time it is **70/30** or **80/20**. For example
-the Big shape takes up 70% of the design while the medium sized shape
-takes up 30%. Continuing with this the Small Shapes take up 30% of the space
+Small Elements should appear in relation to each other.
+
+This ratio can vary a little bit but most of the time it is **70/30** or **80/20**.
+For example the **Big shape takes up 70% of the design while the medium sized shape
+takes up 30%**. Continuing with this the Small Shapes take up 30% of the space
 the Medium Shapes leaving 70% uncluttered.
 
 Variation and Clustering
@@ -271,10 +272,15 @@ together in groups while leaving some larger spaces between them for a more plea
 design.
 
 
-.. figure:: ../_static/images/crate_design_04.png
-   :figwidth: 300
+Example of color coded designs (Big, Medium, Small | White, Grey, Black | Blue, Yellow, Red)
 
-   Example of a design using Big, Medium, Small color coded with white, light grey and dark grey
+.. image:: ../_static/images/crate_design_04.png
+   :width: 300
+
+.. image:: ../_static/images/design_bms_sinix.png
+   :width: 500
+
+
 
 Further Reading/Watching:
     * https://www.youtube.com/watch?v=ZluGXgpdJj4
@@ -286,6 +292,12 @@ Further Reading/Watching:
 
 Gestalt Principles/Psychology
 =============================
+The **Gestalt Principles/Psychology** is a school of psychology that first emerged in Germany and Austria in the early 1900s.
+It was opposed to the dominant view of structuralism that ruled the field of psychology in that time. With the help of
+test and experiments the psychologists came up with a set of rules for perception which are listed below.
+
+Instead of long explanations I tried to keep the rules to one liners with one or two example images.
+If you want to read more on the subject there are links for further reading at the bottom of this section.
 
 Figure-Ground Relationship
 --------------------------
@@ -361,6 +373,14 @@ Further Reading:
 
 Dynamic Symmetry and Rule of Thirds
 ===================================
+These two theories are used to help you compose a shot/painting/scene. They come
+with rules or grids that you can use to align objects inside your cameraview to 
+get a more pleasing composition.
+
+The Rule of thirds can be a stepping stone and an okay helper in the beginning but
+truly great composition uses a lot more rules/guides. Dynamic symmetry steps in here
+with a more complex grid that helps create more pleasing images because its grid follows
+other very important rules.
 
 Rule of Thirds
 --------------
@@ -407,6 +427,16 @@ in our scene/frame.
    
    Dynamic symmetry grid for a 1.5 Rectangle (typical film camera sensor aspect ratio)
 
+The dynamic symmetry grid has the following parts:
+    * Baroque diagonal (lower left to upper right)
+    * Sinister diagonal (lower right to upper left)
+    * The Reciprocals (crossing the sinister and baroque at 90 degree angles)
+    * The Eyes (points where lines are crossing)
+
+In a process called Major Area Division (MAD) we can use multiple shrinked down
+dynamic symmetry grids to get even more lines to align our subjects to. Major
+Area Subdivision is shown below in the third image.
+
 **Example: William-Adolphe Bouguereau - Pieta (1876)**
 
 .. image:: ../_static/images/design_ds_bouguereau_pieta-1876.jpg
@@ -414,6 +444,16 @@ in our scene/frame.
 .. image:: ../_static/images/design_ds_bouguereau_pieta-1876_dynamic_symmetry.jpg
    :width: 300
 .. image:: ../_static/images/design_ds_bouguereau_pieta-1876_dynamic_symmetry_mad.jpg
+   :width: 300
+
+
+**Example: William-Adolphe Bouguereau - Dante and Virgil in Hell (1850)**
+
+.. image:: ../_static/images/design_ds_bouguereau_danteandvirgil_1850.jpg
+   :width: 300
+.. image:: ../_static/images/design_ds_bouguereau_danteandvirgil_1850_grid.jpg
+   :width: 300
+.. image:: ../_static/images/design_ds_bouguereau_danteandvirgil_1850_mad.jpg
    :width: 300
 
 Further Reading:
