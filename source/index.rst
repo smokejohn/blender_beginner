@@ -42,6 +42,8 @@ Getting Started
 Lessons
 -------
 * :doc:`lessons/lesson1`
+* :doc:`lessons/lesson2`
+* :doc:`lessons/lesson3`
 
 Links
 -----
