@@ -8,21 +8,27 @@ concept art. The goal is to create 5 Scifi-Container designs using the
 methods and techniques shown in this lesson and listed below. An example
 of how the end result can look like just below this text.
 
-**We will be looking at following topics:**
-
-* Basic Scene Management with collections
-* Non-destructive / Procedural Modelling techniques
-* Constructive Solid Geometry (CSG/Booleans)
-* Freestyle line rendering
-* Subdivision Surface Modeling
-
 .. image:: ../_static/images/crate_designs.png
    :width: 600
 
+**We will be looking at following topics:**
 
-********************
+* 3D Topics
+    * Basic Scene Management with collections
+    * Non-destructive / Procedural Modelling techniques
+    * Constructive Solid Geometry (CSG/Booleans)
+    * Freestyle line rendering
+* Design Theory
+    * Big, Medium, Small
+    * Gestalt Principles
+    * Dynamic Symmetry
+
+*********
+3D Topics
+*********
+
 Collections / Groups
-********************
+====================
 We can use collection to organize our blender scene and group multiple objects
 that belong together. You can navigate your scenes **Collections** in the 
 **Outliner** at the top right in the Blender UI. To add objects to a collection
@@ -40,9 +46,8 @@ Blender Manual Link:
     `Blender Manual | Collections <https://docs.blender.org/manual/en/latest/scene_layout/collections/collections.html>`_
 
 
-**************************************************
 Non-destructive / Procedural Modelling (Modifiers)
-**************************************************
+==================================================
 .. figure:: ../_static/images/bl_gui_modifier_panel.png
    :align: right
 
@@ -88,9 +93,8 @@ Blender Manual Link:
     `Blender Manual | Modifiers <https://docs.blender.org/manual/en/latest/modeling/modifiers/index.html>`_
 
 
-***************************
 Constructive Solid Geometry
-***************************
+===========================
 **Constructive Solid Geometry** or **CSG** for short, describes the process of creating
 complex geometry from simple solid primitives by subtracting, adding or intersecting
 their volumes.
@@ -138,7 +142,7 @@ is shown at the top while it's operands and boolean operations are shown as leav
 
 
 How it works in Blender
-=======================
+-----------------------
 
 Boolean operations are implemented as a blender modifier. The modifier is simply called
 **Boolean**.
@@ -181,7 +185,7 @@ The result should look something like this:
 
 
 A faster and more convenient way to work with booleans
-======================================================
+------------------------------------------------------
 
 There is an addon that ships with blender that makes all of this way easier.
 Its called **Bool Tool** and you can find it in the **Preferences >> Add-Ons**.
@@ -206,9 +210,8 @@ The process for booling a cube and a sphere is now way faster and easier:
     to tweak the result.
 
 
-***********************
 Freestyle Line Renderer
-***********************
+=======================
 Blenders Freestyle line renderer lets you create Non-Photorealistic-Renders (NPR).
 It is very customizable and has a huge amount of parameters you can tweak to create
 very unique looking lineart, that can look very close to a handdrawn style. We will
@@ -238,15 +241,199 @@ To Match the look of my example you can adjust your settings until they reflect 
 .. |props_viewlayer| image:: ../_static/images/bl_gui_props_viewlayer.png
 
 
-*****************************
-Subdivision Surface Modelling
-*****************************
-To get smooth looking surfaces instead of the faceted or blocky representations
-of objects we have been creating until now we can leverage the **Subdivision
-Surface Modifier**.
+*************
+Design Theory
+*************
 
-Algorithm - What is happening under the hood
-============================================
+Big, Medium, Small (Primary, Secondary, Tertiary)
+=================================================
+Big, Medium, Small or Primary, Secondary, Tertiary Shapes or 1st, 2nd, 3rd Read
+are all names for the way we can structure our designs to make it easier to understand,
+more pleasing to the eye and more interesting. It's what makes a design interesting, cool
+satisfying to look at, if it is applied correctly and in conjunction with the other
+principles explained below.
 
-Topology for subdivision surfaces
-=================================
+Ratio at which the Element should occur
+=======================================
+This design theory also dictates at which ratio the Big, Medium and
+Small Elements should appear in relation to each other. This ratio can vary
+a little bit but most of the time it is **70/30** or **80/20**. For example
+the Big shape takes up 70% of the design while the medium sized shape
+takes up 30%. Continuing with this the Small Shapes take up 30% of the space
+the Medium Shapes leaving 70% uncluttered.
+
+Variation and Clustering
+========================
+Too much of the same shape is boring, so try to have variation in the size of
+the shapes in all three categories (Big, Medium, Small). When you place a lot
+of small shapes, instead of positioning them evenly spaced try to cluster them
+together in groups while leaving some larger spaces between them for a more pleasing
+design.
+
+
+.. figure:: ../_static/images/crate_design_04.png
+   :figwidth: 300
+
+   Example of a design using Big, Medium, Small color coded with white, light grey and dark grey
+
+Further Reading/Watching:
+    * https://www.youtube.com/watch?v=ZluGXgpdJj4
+    * https://www.linodriegheart.com/design-principles-in-concept-art-and-design/
+    * http://neilblevins.com/cg_education/primary_secondary_and_tertiary_shapes/primary_secondary_and_tertiary_shapes.htm
+    * https://www.youtube.com/watch?v=6IojuePYIHo
+    * https://www.youtube.com/watch?v=qMH_J_vcoqE
+
+
+Gestalt Principles/Psychology
+=============================
+
+Figure-Ground Relationship
+--------------------------
+How we perceive an object is determined by the relationship of the object or figure to its background.
+Good Figure-Ground Relationship most of the time means good readability of shapes/objects/characters.
+
+.. image:: ../_static/images/design_gp_fgr.png
+   :width: 300
+.. image:: ../_static/images/design_gp_fgr_rubin_vase.jpg
+   :width: 300
+
+Law of Closure
+--------------
+We favor closing incomplete shapes instead of seeing their parts as their own shapes.
+
+.. image:: ../_static/images/design_gp_closure_001.png
+   :width: 300
+.. image:: ../_static/images/design_gp_closure_002.png
+   :width: 300
+
+Law of Continuity
+-----------------
+Lines or Curves that aren't complete will be automatically completed in our brains.
+An X shape will be interpreted as two crossing lines not two bent/kinked lines.
+
+.. image:: ../_static/images/design_gp_continuity_001.png
+   :width: 300
+.. image:: ../_static/images/design_gp_continuity_002.png
+   :width: 300
+
+Law of Praegnanz / Simplicity
+-----------------------------
+We perceive shapes always in their simplest form (primitives).
+
+.. image:: ../_static/images/design_gp_simplicity_001.png
+   :width: 300
+.. image:: ../_static/images/design_gp_simplicity_002.png
+   :width: 300
+
+Law of Proximity
+----------------
+Elements who are close together will be perceived as belonging together.
+
+.. image:: ../_static/images/design_gp_proximity_001.png
+   :width: 300
+.. image:: ../_static/images/design_gp_proximity_002.png
+   :width: 300
+
+Law of Similarity
+-----------------
+Elements who are similar to each other will more likely be perceived as as belonging together.
+
+.. image:: ../_static/images/design_gp_similarity_001.png
+   :width: 300
+
+Law of Symmetry
+---------------
+We perceive objects as being symmetrical and forming around a center point. It is pleasing to the
+eye to divide objects into symmetrical parts, we also perceive unconnected objects as symmetrical
+to a point or axis if possible.
+
+.. image:: ../_static/images/design_gp_symmetry_001.png
+   :width: 300
+.. image:: ../_static/images/design_gp_symmetry_002.png
+   :width: 300
+
+Further Reading:
+    * https://www.canva.com/learn/gestalt-theory/
+    * https://www.interaction-design.org/literature/topics/gestalt-principles
+    * https://www.creativebloq.com/graphic-design/gestalt-theory-10134960
+    * https://www.andyrutledge.com/gestalt-principles-1-figure-ground-relationship.html
+
+
+Dynamic Symmetry and Rule of Thirds
+===================================
+
+Rule of Thirds
+--------------
+John Thomas Smith (1766-1833) [English painter, engraver and antiquarian] came up with
+the rule of thirds in 1797. By splitting the Image into thirds with four lines a simple
+grid is created. It is claimed that positioning your subject on one of the *power points*
+(the intersections of the gridlines) or close to it will create more interest and a better
+composition than shooting your subject dead center. 
+
+You can get good artwork with the rule of thirds if you use additional other 
+principles, but if you only focus on the rule of thirds you are limiting yourself
+and your art.
+
+.. warning::
+    The rule of thirds is not in this list because it is a good tool or something
+    I want you to use. It's here as a bad example, as an example of how oversimplifying
+    something complex like composition can lead to bland artwork. It's better than 
+    nothing, thats for sure, but it's a dead end composition wise, it will not lead
+    you anywhere after your first improvements.
+
+**Example: John Thomas Smith**
+
+.. image:: ../_static/images/design_r3_john_smith_art_002.jpg
+   :width: 300
+.. image:: ../_static/images/design_r3_john_smith_art_003.jpg
+   :width: 300
+.. image:: ../_static/images/design_r3_john_smith_art_001.jpg
+   :width: 300
+
+Further Reading:
+    * https://en.wikipedia.org/wiki/Rule_of_thirds
+    * https://photographylife.com/the-rule-of-thirds
+
+Dynamic Symmetry
+----------------
+Dynamic Symmetry was formulated by Jay Hambidge (1867-1924) and is a system
+defining compositional rules inspired by Greek architecture, sculpture and ceramics.
+
+It's most useful part is the dynamic symmetry grid which can be used to arrange objects
+in our scene/frame.
+
+.. figure:: ../_static/images/design_ds_grid.png
+   :figwidth: 500
+   
+   Dynamic symmetry grid for a 1.5 Rectangle (typical film camera sensor aspect ratio)
+
+**Example: William-Adolphe Bouguereau - Pieta (1876)**
+
+.. image:: ../_static/images/design_ds_bouguereau_pieta-1876.jpg
+   :width: 300
+.. image:: ../_static/images/design_ds_bouguereau_pieta-1876_dynamic_symmetry.jpg
+   :width: 300
+.. image:: ../_static/images/design_ds_bouguereau_pieta-1876_dynamic_symmetry_mad.jpg
+   :width: 300
+
+Further Reading:
+    * http://larmonu.larmonstudios.com/dynamic-symmetry/
+    * https://photographycourse.net/dynamic-symmetry/
+
+
+Grids in Blender
+----------------
+You can enable the rule of thirds grid and the dynamic symmetry grid in Blender
+by selecting your Camera and navigating to the |props_object_data| **Object Data
+Panel** in the **Properties Panel** on the right hand side of Blenders UI.
+Open the **Viewport Display Rollout** and then expand the **Composition Guides
+Subrollout** to find a series of checkboxes that will give you access to different
+grids. Once checked the grid will be drawn in the 3D Viewport if you are looking through
+the camera.
+
+.. image:: ../_static/images/bl_gui_props_object_data_camera_compguides.png
+   :width: 200
+.. image:: ../_static/images/bl_gui_3dview_camera_compguides.png
+   :width: 800
+
+.. |props_object_data| image:: ../_static/images/bl_gui_props_object_data_camera.png

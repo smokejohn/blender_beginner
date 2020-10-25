@@ -191,6 +191,19 @@ the top left corner of the **3D Viewport**. Now you can access all of blenders
 mesh editing tools, some of which are described below. Once you are done editing
 the mesh you can press **Hotkey: Tab** again to go back to **Object Mode**.
 
+.. warning::
+    Some modeling tools may behave very weird if you have been scaling your objects
+    in object mode. That's because their settings sometimes depend on the object
+    scale. To prevent unexpected results you should use the **Apply Scale** 
+    command to reset the objects scale back to 1.0.
+
+    | **Check object Scale >> 3D Viewport Sidebar (Hotkey: N) >> Item tab >> Scale**
+    | If the scale of your objects **is not 1.0, 1.0, 1.0 for X, Y, Z** then use the Apply Scale Operator
+    | **Apply Scale >> Hotkey: Ctrl + A >> Select Apply Scale**
+
+    .. image:: ../_static/images/bl_gui_3dview_item.png
+    .. image:: ../_static/images/bl_gui_apply_scale.png
+
 
 Loop Cut and Slide
 ==================
