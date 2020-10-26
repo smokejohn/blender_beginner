@@ -82,6 +82,7 @@ official Blender Manual by clicking on the link below:**
 Blender Manual Link:
     `Blender Manual | User Interface <https://docs.blender.org/manual/en/latest/interface/index.html>`_
 
+
 **********************
 3D Viewport Navigation
 **********************
@@ -306,7 +307,7 @@ Activating the Viewport Pie Menu addon
 --------------------------------------
 * **Edit >> Preferences...** or **F4 >> Preferences...**
 * Open the **Add-ons** tab by clicking on it on the left hand side
-* Use the search bar on the left to lookg for the **3D Viewport Pie Menus Addon**
+* Use the search bar on the right to look for the **3D Viewport Pie Menus Addon**
 * Activate it by ticking on the **checkbox on the left of the Addon Entry**
 * Open the Addons Preferences by **clicking on the little triangle arrow left of the checkbox**
 * Disable/Uncheck all menus listed in the preferences except the very last one
@@ -318,5 +319,24 @@ Activating the Viewport Pie Menu addon
 .. image:: ../_static/images/bl_preferences_addons_viewport_pie_numpad.png
     :width: 500
 .. image:: ../_static/images/bl_addon_viewport_pie_numpad.png
+
+
+Changing Keybinds
+-----------------
+If we really need to we can also change the hotkey a command is on by modifiying
+blenders **Keymap**
+
+* **Edit >> Preferences...** or **F4 >> Preferences...**
+* Open the **Keymap** tab by clicking on it on the left hand side
+* Use the search bar on the right to find the command you want to change the keybind on by typing its name
+* Look for the right command in the search results below and make sure it is in
+  the **right context** (Context is the line with the litte dot in front of it)
+* Set the modifier keys by clicking on them on the bottom right and the keybind 
+  by setting it in the text input field in the top right of the entry.
+
+.. figure:: ../_static/images/bl_preferences_keymap_change_bind.png
+
+    Image showing the **Select Less Keybind** in a modified state where it is 
+    bound to **Left Bracket [** without modifier keys.
 
 

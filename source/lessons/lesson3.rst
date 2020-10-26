@@ -39,8 +39,15 @@ you want **click on the box icon next to the name of the collection to make it
 the active collection** (In the image below the *Crate_03* Collection is active)
 
 .. figure:: ../_static/images/bl_gui_outliner_collections.png
-   
+
    Blender Outliner with the button to create a new collection highlighted in yellow
+
+.. tip::
+    You can also add objects to a collection by selecting them in the **Outliner**
+    or **3D Viewport** and pressing **Hotkey:M** to open a floating context menu
+    next to your mousecursor with a list of all collections in the file and click
+    on the collection name.
+   
 
 Blender Manual Link:
     `Blender Manual | Collections <https://docs.blender.org/manual/en/latest/scene_layout/collections/collections.html>`_
@@ -140,6 +147,10 @@ is shown at the top while it's operands and boolean operations are shown as leav
     Example of complex geometry constructed from simple solid primitives
     (`Wikimeda Commons: Zottie <https://en.wikipedia.org/wiki/Constructive_solid_geometry#/media/File:Csg_tree.png>`_)
 
+.. warning::
+    Boolean operations work only on solid objects, meaning closed 3D Meshes without holes and their normals
+    pointing in the right directions (inward). If a Boolean operation fails check your Operands for holes
+    or unwelded vertices.
 
 How it works in Blender
 -----------------------
@@ -206,9 +217,40 @@ The process for booling a cube and a sphere is now way faster and easier:
 .. note::
     **Brush Boolean** keeps the boolean operation interactive and you can still move
     the cutter while **Auto Boolean** will apply the boolean and only leave the resulting
-    mesh behind. Therefore if only choose Auto Boolean if you are sure you don't want
+    mesh behind. Therefore only choose Auto Boolean if you are sure you don't want
     to tweak the result.
 
+
+Material Slots and Boolean modifiers
+------------------------------------
+During the boolean operation with Operand A and Operand B some attributes that are
+set on Operand B (Cutter) will be transferred over to the geometry the boolean operation
+creates on Operand A. **That means the resulting faces will carry over the Material, Normals
+and some other attributes of Operand B**. With this we can not only cut away or add to our
+Designs but also **simultaneously assign materials to specific areas of the resulting mesh.**
+
+**For this to work we have to make sure there are Material slots on our Stock / Operand A Object.**
+
+To add a material slot you can press the **Button with the + symbol** in the |props_material|
+**Material Properties Panel** (Highlighted in **Yellow** in the image below)
+
+You can also **apply specific Materials to selected Faces** in **Edit Mode** by
+selecting it in the **SlotList** (Highlighted in **Blue**) and then clicking on the **Assign-Button** 
+(Highlighted in **Red**, only visible in **Edit Mode**).
+
+.. figure:: ../_static/images/bl_gui_props_material_slots.png
+    
+   MaterialSlot-List (**Blue**), Add/Remove Materialslot button (**Yellow**) and Edit
+   Mode Buttons (**Red**)
+
+
+.. tip::
+    For our Big, Medium, Small Color coding with White, Grey, Darkgrey to work we will
+    have to setup our Material Slots exactly like in the image above on our Operand A
+    (Stock Object). And then have a single material on our Operand B that matches it's
+    Size (Big, Medium, Small) and it will carry over and be shaded correctly.
+
+.. |props_material| image:: ../_static/images/bl_gui_props_material.png
 
 Freestyle Line Renderer
 =======================
@@ -232,7 +274,17 @@ in the **Properties Panel** at the very bottom of the Viewlayer Panel. I recomme
 **Crease Angle** setting up to **160 Degrees** so even very shallow changes in geometry are getting
 drawn as outlines.
 
-To Match the look of my example you can adjust your settings until they reflect those in the screenshots below:
+To Match the look of my example you can adjust your settings until they reflect those in the screenshots below.
+
+.. hint::
+    If the line width modulation doesn't look right in your scene it might be because
+    you are working at a different scale then me. You can adjust the width modulation
+    by changing the **Period of the Noise Modifiers** to bigger or smaller values.
+    Smaller values will make the changes in line width more abrupt will larger values
+    will make the changes more subtle and smooth.
+
+    The first and second noise modifier are using periods in a ratio of 3 to 1 (150 to 50).
+    If you want to keep the look adjust them but keep the ration the same (i.e 60 to 20 or 300 to 100)
 
 .. image:: ../_static/images/bl_gui_props_viewlayer_freestyle.png
 .. image:: ../_static/images/bl_gui_props_viewlayer_freestyle_linestyle.png

@@ -160,8 +160,8 @@ Ctrl + Alt + LMouse Edge/Face Ring Selection
 A                   Select All
 Alt + A             Deselect All
 Ctrl + I            Invert current selection
-Ctrl + Numpad+      Grow current selection outwards
-Ctrl + Numpad-      Shrink current selection inwards
+Ctrl + Numpad+      Grow current selection outwards (Select More)
+Ctrl + Numpad-      Shrink current selection inwards (Select Less)
 L                   Select connected Geometry
 Alt + Z             X-Ray-Mode (lets you select occluded geometry)
 =================== ===============================================
