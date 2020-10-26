@@ -352,6 +352,8 @@ Elements who are similar to each other will more likely be perceived as as belon
 
 .. image:: ../_static/images/design_gp_similarity_001.png
    :width: 300
+.. image:: ../_static/images/design_gp_similarity_002.png
+   :width: 300
 
 Law of Symmetry
 ---------------
