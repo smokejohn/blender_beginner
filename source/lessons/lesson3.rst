@@ -152,9 +152,9 @@ is shown at the top while it's operands and boolean operations are shown as leav
     pointing in the right directions (inward). If a Boolean operation fails check your Operands for holes
     or unwelded vertices.
 
+
 How it works in Blender
 -----------------------
-
 Boolean operations are implemented as a blender modifier. The modifier is simply called
 **Boolean**.
 
@@ -197,7 +197,6 @@ The result should look something like this:
 
 A faster and more convenient way to work with booleans
 ------------------------------------------------------
-
 There is an addon that ships with blender that makes all of this way easier.
 Its called **Bool Tool** and you can find it in the **Preferences >> Add-Ons**.
 
