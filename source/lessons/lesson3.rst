@@ -242,12 +242,19 @@ selecting it in the **SlotList** (Highlighted in **Blue**) and then clicking on 
    MaterialSlot-List (**Blue**), Add/Remove Materialslot button (**Yellow**) and Edit
    Mode Buttons (**Red**)
 
-
 .. tip::
     For our Big, Medium, Small Color coding with White, Grey, Darkgrey to work we will
     have to setup our Material Slots exactly like in the image above on our Operand A
     (Stock Object). And then have a single material on our Operand B that matches it's
     Size (Big, Medium, Small) and it will carry over and be shaded correctly.
+
+
+**Video showing how to assign materials to different faces in edit mode:**
+
+.. raw:: html
+
+    <video controls src="../_static/videos/bl_gui_props_material_slots_assign.mp4"></video>
+
 
 .. |props_material| image:: ../_static/images/bl_gui_props_material.png
 
@@ -277,7 +284,7 @@ To Match the look of my example you can adjust your settings until they reflect 
 
 .. hint::
     If the line width modulation doesn't look right in your scene it might be because
-    you are working at a different scale then me. You can adjust the width modulation
+    you are working at a different scale than me. You can adjust the width modulation
     by changing the **Period of the Noise Modifiers** to bigger or smaller values.
     Smaller values will make the changes in line width more abrupt will larger values
     will make the changes more subtle and smooth.
