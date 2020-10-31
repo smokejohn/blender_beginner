@@ -194,6 +194,13 @@ The result should look something like this:
 .. |viewport_display| image:: ../_static/images/bl_gui_viewport_display_bounds.png
     :width: 100
 
+.. warning::
+    Your Cutter object will still be visible when you Render your final image (**Hotkey: F12**)
+    to get control over which objects will show up in the final render you need to enable the
+    **Disable in Render Flag** in the **Outliner Filter Menu** (Shown below).
+
+    .. image:: ../_static/images/bl_gui_outliner_filter_renderflag.gif
+
 
 A faster and more convenient way to work with booleans
 ------------------------------------------------------
