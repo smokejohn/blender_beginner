@@ -289,6 +289,10 @@ drawn as outlines.
 
 To Match the look of my example you can adjust your settings until they reflect those in the screenshots below.
 
+
+.. image:: ../_static/images/bl_gui_props_viewlayer_freestyle.png
+.. image:: ../_static/images/bl_gui_props_viewlayer_freestyle_linestyle.png
+
 .. hint::
     If the line width modulation doesn't look right in your scene it might be because
     you are working at a different scale than me. You can adjust the width modulation
@@ -299,8 +303,7 @@ To Match the look of my example you can adjust your settings until they reflect 
     The first and second noise modifier are using periods in a ratio of 3 to 1 (150 to 50).
     If you want to keep the look adjust them but keep the ration the same (i.e 60 to 20 or 300 to 100)
 
-.. image:: ../_static/images/bl_gui_props_viewlayer_freestyle.png
-.. image:: ../_static/images/bl_gui_props_viewlayer_freestyle_linestyle.png
+    If the width modulation isn't strong enough you can play with the **Influence Sliders**.
 
 .. |props_render| image:: ../_static/images/bl_gui_props_render.png
 .. |props_viewlayer| image:: ../_static/images/bl_gui_props_viewlayer.png
