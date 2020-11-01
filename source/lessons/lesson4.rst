@@ -120,6 +120,51 @@ better you will get at it.
 Additional Tools for Subdivions Surface Modelling
 =================================================
 
+Spotting problems and Artifacts
+-------------------------------
+When we want to create very smooth surfaces we need to be able to spot problem
+areas where there are bumps, pinching or dimples in our surface. These things
+are very hard to spot on a dull surface or with the default material that is
+on our mesh when we model in the **Solid View Mode**.
+
+Luckily we can apply a range of "materials" very quickly to all our objects
+in the **3D Viewport** by using **Matcaps**. Very shiny matcaps make it easy
+to find problematic areas on our subdivision surface models.
+
+.. image:: ../_static/images/bl_3dview_matcaps.gif
+
+You can enable **Matcaps** on the top right hand side of the **3D Viewport**
+
+#. Click on the **Downward triangle arrow** to the right of the **Viewport 
+   Shading mode buttons**.
+#. Click on the **Matcap button**
+#. Change the current **Matcap** by clicking on the **Sphere below the Matcap 
+   button** to open **a list of matcaps to selected from.**
+
+.. image:: ../_static/images/bl_3dview_viewport_shading.png
+
+.. tip::
+    Sadly some very useful matcaps were dropped from the list of available matcaps
+    with the release of Blender 2.8. I provide a zipfile with the in my opinion
+    most useful matcaps for subdivision surface modelling.
+
+    Download:
+        :download:`Subdivision Surface Modeling Matcaps <../_static/files/subd_matcaps.zip>`
+
+    After you **unpacked the zip-archive** you can add them to your matcaplist by:
+
+    #. Opening Preferences with **Edit > Preferences...** or **Hotkey: F4 > Preferences...**
+    #. Navigate to the **Lights** section by clicking on the button on the left.
+    #. Clicking on the **Install** button in the **Matcap Rollout section**
+    #. Using the **Filebrowser** to select all **Matcaps** you want to add and confirming
+       with the button on the bottom right.
+
+    .. figure:: ../_static/images/bl_preferences_lights_matcaps.png
+    
+        Blender Preferences Lights section showing my favorite matcaps already imported
+        in the MatCaps Rollout.
+
+
 Remove/Dissolve Edge
 --------------------
 **Hotkey: Ctrl + X**
@@ -170,3 +215,122 @@ You can activate the addon like this:
 #. Activate it by ticking its checkbox
 
 .. image:: ../_static/images/bl_preferences_addons_looptools.png
+
+
+*********
+Materials
+*********
+
+PBR Model (Physically Based Rendering)
+===============================================
+The PBR model was created to better simulate real life materials and make it
+easier for the artist to create physically accurate representations of surfaces.
+It was adopted around 2013 and is very widespread and used in almost any 3D 
+software and game engine out on the market currently. It replaced the old
+**Specular/Glossiness Model** that we will briefly look at later.
+
+Even though its name doesn't suggest it, you can also create materials and looks with
+it that arent physically correct. The material model can also be used for heavily
+stylized or cartoony looks.
+
+The Blender **Principled BSDF** is a Shader that implements **Pixar's Principled Shader**
+and builds on the **PBR Model**. 
+
+The PBR Model in its most basic form includes the following parameters/slots:
+    * Albedo/Basecolor
+    * Specular
+    * Roughness
+    * Metallness/Metallic
+
+Albedo/Basecolor
+----------------
+Albedo is the basecolor of you Material, it defines the color of the object 
+when it is hit with very diffused light. If a map/texture is used it shouldn't
+contain any lighting information (No Shadows or Highlights).
+
+Good values for **Albedo/Basecolor** are in a specific range, it is recommended
+to stay away from very dark values (< 0.05-0.1) and very bright values (> 0.8).
+It is also good practise to not use overly saturated colors, very bright saturated
+colors are not that common in the real world.
+
+Specular
+--------
+The Specular parameter control how much a surface reflects light. The principled
+BSDF has a default value of 0.5 which is accurate for a wide variety of materials.
+An example for a material with low specular would be rubber while water, glass or
+diamonds have a very high specular value.
+
+Roughness
+---------
+This parameter or map defines how rough a surface is and how the specular reflection
+behaves. A low roughness value yields a very smooth surface with mirror like reflection
+while high roughness value simulate a rough surface with a very diffused specular reflection.
+
+Metallness/Metallic
+-------------------
+Metallness or the Metallic value are used to switch the PBR Material model between
+it's two modes. While this value is at 0 the Material simulates a dielectric
+(non-conducting) surface (e.g Wood, Plastic, Glass, Rubber) with a white highlight.
+When the parameter is turned up to 1 it simulates a metallic conductive surface
+(Iron, Copper, Gold, Titanium) with a colored highlight. The color of the highlight
+is derived from the **Albedo/Basecolor** value.
+
+
+Specular/Glossiness Model
+=========================
+Even though the Specular/Glossiness Model got replaced you can still find 
+Shaders and Materials in Render-Engines and other 3D software today that
+kept it for backwards compatibility.
+
+The Specular/Glossiness Model includes the following parameters/slots:
+    * Diffuse
+    * Specular
+    * Glossiness
+    * Index of Refraction (IOR)
+
+Diffuse
+-------
+The Diffuse follows same concept as the **Albedo/Basecolor** in the PBR model,
+but since the lighting calculation wasn't that well developed in games at the
+time it often used textures/maps with lighting information (I.e Shadows and 
+Highlights) in them.
+
+Specular
+--------
+Specular is almost exactly the same as in the PBR Model, most Shader/Materials
+have a value range of 0 to 1 (non reflective to very reflective). In the 
+Specular/Glossiness Model this value is also used in combination with the
+`Index of Refraction(IOR)`_ is used to create metallic looking surfaces.
+
+Glossiness
+----------
+This Slot/Parameter defines how glossy (I.e smooth) the simulated surface is.
+It is essentially the inverse of the **Roughness Parameter/Map** in the PBR 
+Model. If you need to use an old **Spec/Gloss Model dataset** in a **PBR Model**
+simply **invert the Glossiness to get the Roughness value**. 
+
+Index of Refraction(IOR)
+------------------------
+The Index of Refraction is a physical term describing how much a ray of light
+is bent when it enters a surface (Glass, Water). In most old shader models
+this is linked to the Reflection stength (Index of Reflection). There are
+`Tables with refractive indices available online <https://en.wikipedia.org/wiki/List_of_refractive_indices>`_.
+To simulate metallic surfaces you could either turn the IOR up very high (values of 40+) or
+drop it below a value of 1.
+
+
+Shader Graph
+============
+In almost all 3D applications the construction of Materials/Shaders is done with
+a network of nodes. This Node Graph allows the creation of highly complex networks
+to simulate real surfaces very accurately.
+
+In Blender you can access the Shader Graph by clicking on the **Shading Workspace**
+at the top center of Blenders UI.
+
+.. image:: ../_static/images/bl_gui_workspace_shading.png
+
+
+Blender Manual Links:
+    * `Blender Manual | Shader Editor <https://docs.blender.org/manual/en/latest/editors/shader_editor.html>`_
+    * `Blender Manual | Shader Nodes <https://docs.blender.org/manual/en/latest/render/shader_nodes/index.html>`_
