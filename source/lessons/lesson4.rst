@@ -149,12 +149,16 @@ You can enable **Matcaps** on the top right hand side of the **3D Viewport**
     most useful matcaps for subdivision surface modelling.
 
     Download (right-click and choose Save image as...)
+
         .. image:: ../_static/images/mc12.jpg
            :width: 200
+
         .. image:: ../_static/images/mc15.jpg
            :width: 200
+
         .. image:: ../_static/images/mc16.jpg
            :width: 200
+
         .. image:: ../_static/images/mc17.jpg
            :width: 200
 
