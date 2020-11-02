@@ -146,7 +146,7 @@ You can enable **Matcaps** on the top right hand side of the **3D Viewport**
 .. only:: builder_html or readthedocs
 
     Download:
-        :download:`Subd-Modeling-Matcaps <./subd_matcaps.zip>`
+        :download:`Subd-Modeling-Matcaps <./mc12.jpg>`
 
 .. tip::
     Sadly some very useful matcaps were dropped from the list of available matcaps
