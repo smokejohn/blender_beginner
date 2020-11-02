@@ -143,18 +143,23 @@ You can enable **Matcaps** on the top right hand side of the **3D Viewport**
 
 .. image:: ../_static/images/bl_3dview_viewport_shading.png
 
-.. only:: builder_html or readthedocs
-
-    Download:
-        :download:`Subd-Modeling-Matcaps <./mc12.jpg>`
-
 .. tip::
     Sadly some very useful matcaps were dropped from the list of available matcaps
-    with the release of Blender 2.8. I provide a zipfile with the in my opinion
+    with the release of Blender 2.8. I provide imagefiles of the in my opinion
     most useful matcaps for subdivision surface modelling.
 
+    Download (right-click and choose Save image as...)
+        .. image:: ../_static/images/mc12.jpg
+           :width: 200
+        .. image:: ../_static/images/mc15.jpg
+           :width: 200
+        .. image:: ../_static/images/mc16.jpg
+           :width: 200
+        .. image:: ../_static/images/mc17.jpg
+           :width: 200
 
-    After you **unpacked the zip-archive** you can add them to your matcaplist by:
+
+    After you **downloaded the images** you can add them to your matcaplist by:
 
     #. Opening Preferences with **Edit > Preferences...** or **Hotkey: F4 > Preferences...**
     #. Navigate to the **Lights** section by clicking on the button on the left.
