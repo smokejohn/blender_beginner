@@ -149,7 +149,7 @@ You can enable **Matcaps** on the top right hand side of the **3D Viewport**
     most useful matcaps for subdivision surface modelling.
 
     Download:
-        :download:`Subd-Modeling-Matcaps<../_static/files/subd_matcaps.zip>`
+        :download:`Subd-Modeling-Matcaps<../_static/downloads/subd_matcaps.zip>`
 
     After you **unpacked the zip-archive** you can add them to your matcaplist by:
 
