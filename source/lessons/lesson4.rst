@@ -196,6 +196,25 @@ helps a great deal.
 
 .. image:: ../_static/images/bl_edit_shrink_fatten.gif
 
+Joining Objects and Separating Meshes
+=====================================
+* **Join | Hotkey: Ctrl + J**
+* **Separate | Hotkey: P**
+
+In some cases we want to combine two separate objects in to one or split subparts
+of our mesh off into another object. 
+
+We can combine/join two objects together by selecting them and then pressing
+**Hotkey: Ctrl + J** in **Object Mode**.
+
+We can split parts of our mesh off into a separate object by selecting the faces
+in **Edit Mode** and then pressing **Hotkey: P >> Selection** to part the mesh
+into two objects.
+
+.. image:: ../_static/images/bl_object_join.gif
+
+.. image:: ../_static/images/bl_edit_separate.gif
+
 LoopTools
 ---------
 **Hotkey: RMouse-click (Edit Mode) [After you activated the Addon]**
@@ -334,3 +353,34 @@ at the top center of Blenders UI.
 Blender Manual Links:
     * `Blender Manual | Shader Editor <https://docs.blender.org/manual/en/latest/editors/shader_editor.html>`_
     * `Blender Manual | Shader Nodes <https://docs.blender.org/manual/en/latest/render/shader_nodes/index.html>`_
+
+
+How to apply a simple image texture to the Albedo/Basecolor Slot
+================================================================
+To load an image texture (I.e. a bitmap image file like .png or .jpg) we need to create a **Image Texture node**.
+
+All commands below, **especially the Hotkeys** assume your mosue cursor is hovering over the **Shader Editor**.
+
+**There is multiple ways to add a Image Texture Node to the Shader Editor:**
+
+#. **Drag and drop the image from your filebrowser onto the Shader Editor** to automatically create a **Image Texture Node
+   that has you texture file already loaded**
+
+
+#. **Add >> Texture >> Image Texture** or **Hotkey: Shift + A >> Texture >> Image Texture**
+
+    * **Click Open** on the **Image Texture Node** and select your image file with the filebrowser that pops up
+
+        .. image:: ../_static/images/bl_gui_shadered_add_texture.png
+           :width: 200
+
+        .. image:: ../_static/images/bl_gui_shadered_imagetex_node.png
+           :width: 200
+
+
+After you have setup your **Image Texture Node** connect its **Color Output** to the **Principled BSDF's Basecolor Input**.
+
+.. image:: ../_static/images/bl_gui_shadered_imagetex_basecolor.png
+
+
+
