@@ -41,6 +41,18 @@ will discuss ways to control the shape in the section below.
     smoothed surface** and can also lead to the mesh totally losing its form in some places.
 
 
+Subdivison Surface Modifier
+===========================
+To create a Subdivision Surface Model in Blender you have to add a **Subdivision Surface Modifier**
+to the mesh you want to subdivide.
+You can also quickly add a **Subd-Modifier** and/or setting its **Iterations Parameter** by pressing
+**Hotkey: Ctrl + 1,2,3,4,5** (Number sets the Iterations Parameter)
+
+.. image:: ../_static/images/bl_gui_props_modifier_subd.png
+
+Blender Manual Link:
+   * `Blender Manual | Subdivision Surface Modifier <https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/subdivision_surface.html>`_
+
 Topology for subdivision surfaces
 =================================
 During the subdivision/refinement the shape of our object can change quite drastically.
