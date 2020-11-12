@@ -24,7 +24,7 @@ Welcome to Blender Beginner!
    lessons/lesson2
    lessons/lesson3
    lessons/lesson4
-.. lessons/lesson5
+   lessons/lesson5
 .. lessons/lesson6
 .. lessons/lesson7
 .. lessons/lesson8
@@ -45,6 +45,7 @@ Lessons
 * :doc:`lessons/lesson2`
 * :doc:`lessons/lesson3`
 * :doc:`lessons/lesson4`
+* :doc:`lessons/lesson5`
 
 Links
 -----
