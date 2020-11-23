@@ -12,6 +12,18 @@ to shrinkwrap geometry onto other objects.
 .. contents:: Table of Contents
     :depth: 3
 
+Camera
+======
+
+===================== ==============================================================================
+Hotkey                Function
+===================== ==============================================================================
+/                     Isolate the currently selected Object/s (pressing again returns to normal mode
+Numpad 0              Look through the **Scene Camera** (pressing it again returns to viewport)
+Ctrl + Numpad 0       Sets the current object as **Scene Camera**
+Ctrl + Alt + Numpad 0 Aligns the selected camera to the viewport
+===================== ==============================================================================
+
 ********
 Modeling
 ********
