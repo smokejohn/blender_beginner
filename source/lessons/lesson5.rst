@@ -12,8 +12,9 @@ to shrinkwrap geometry onto other objects.
 .. contents:: Table of Contents
     :depth: 3
 
+******
 Camera
-======
+******
 
 ===================== ==============================================================================
 Hotkey                Function
