@@ -1,25 +1,154 @@
-########
-Lesson 7
-########
+##################
+Lesson 7 - Rigging
+##################
+
+.. image:: ../_static/images/vic_scouting.png
+   :width: 600
 
 ****************
 What is Rigging?
 ****************
+Rigging is the process of creating a control structure for our Character that 
+makes it easy to drive and animate its movements later on.
+
+This control structure is called the **Rig** and its elements are organized in a
+**Parent/Child - Hierarchy**. The way the different elements of the hierarchy
+are able to move can be limited in different ways by using **Constraints** 
+
+.. figure:: ../_static/images/bl_armature_vic_rig.png
+    :figwidth: 400
+
+    example of a rig / character skeleton (Armature), here you see the
+    Armature that drives the robot VIC shown in the render at the top.
+
 
 Parenting
 =========
+Through Parenting we can assign an object as a child to another object making 
+that object its parent. In this parent/child relationship the child object
+now follows its parents transformations. When the Parent gets moved, scaled or
+rotated the child will also get transformed accordingly. All the while the
+childs transformation values (Location, Rotation, Scale) will not show this
+transformation. Because they now display the distance to its Parent instead
+of the 3D World Origin.
+
+=========================== ==========================================
+Hotkey                      Function
+=========================== ==========================================
+**Ctrl + P**                Parent selected objects to active object
+**Alt + P**                 Unparent selected objects
+=========================== ==========================================
+
+Blender Manual Link:
+    * `Blender Manual | Parenting Objects <https://docs.blender.org/manual/en/latest/scene_layout/object/editing/parent.html>`_
+    * `Blender Manual | Parenting <https://docs.blender.org/manual/en/latest/animation/armatures/bones/editing/parenting.html>`_
 
 Constraints
 ===========
+Constraints limit the transformations an object can perform in a specific way.
+It's possible to combine multiple Constraints to create very complex behaviour.
+
+Constraints can be added to Objects and Bones like modifiers by opening the
+|props_constraints| **Object Constrants Properties Panel**. The Constraints
+system in blender follows the same rules as the modifier system in terms of
+how the User Interface acts and feels.
+
+.. image:: ../_static/images/bl_gui_props_constraints_bones_limit_loc.png
+
+.. |props_constraints| image:: ../_static/images/bl_gui_props_constraints.png
+
+Blender Manual Link:
+    `Blender Manual | Constraints <https://docs.blender.org/manual/en/latest/animation/constraints/introduction.html>`_
 
 Bones/Armature
 ==============
+To build our Rig we will not use Mesh objects or other geometry we have been using
+up until now, but a new kind of object called a **Bone**. With it we will construct
+our characters **Skeleton or Armature**.
+
+To start building we need to add an **Armature Object** to our scene. Add it by
+pressing **Hotkey: Shift + A >> click on Armature**.
+
+.. hint::
+    The Armature object has 2 Modes we are interested in **Edit Mode** and 
+    **Pose Mode** we can toggle between those two by pressing **Hotkey: Tab**.
+
+    If you want to return to **Object Mode** try pressing **Hotkey: Ctrl + Tab**
+    to open a **Pie Menu** where you can choose which mode you want to enter.
+
+What is a Bone?
+---------------
+In most 3D Applications bones have a octahedral shape, and feature a **head and a
+tail**. A Bone rotates around its **head** and always points to its **tail**.
+
+.. figure:: ../_static/images/bl_object_bone.png
+   :figwidth: 150
+
+   Image showing a single bone with its **head at the bottom** and its **tail at the top.**
+
+**Armature Edit Mode Hotkeys:**
+
+=========================== ===========================================
+Hotkey                      Function
+=========================== ===========================================
+**E**                       Extrude Bone and form a chain
+**Alt + P**                 Unparent selected objects
+**Ctrl + P**                Set active bone as parent to selected bones
+=========================== ===========================================
+
+With these tools we can build a hierarchy of bones consisting of **bone
+chains**.
+
+.. figure:: ../_static/images/bl_object_bone_chain.png
+
+    Example of a bone hierarchy consiting of one root bone
+    that acts as the parent of two separate bone chains.
+
+Blender Manual Link:
+    `Blender Manual | Bones <https://docs.blender.org/manual/en/latest/animation/armatures/bones/introduction.html>`_
 
 Skinning/Armature Modifier
 ==========================
+Once we finished building our Armature we need to bind our character to it. This
+process is called Skinning, we are binding our 3D Mesh Skin to our Rig/Bones.
+Every Vertex of our 3D Mesh needs to be told which bone of our Armature it has
+to follow, it can also follow multiple bones to a specific percentage. By giving
+each vertex a specific weighting value for each bone we want to affect it we can
+create smooth deformations of our 3D Mesh.
+
+Blender provides the Armature Modifier for this purpose. We just need to add it
+to our 3D Mesh Character and put our Armature in the **Armature slot**.
+
+.. hint::
+    A fast way to bind a 3D mesh to an Armature is by selecting the 3D mesh then
+    the Armature and then pressing **Hotkey: Ctrl + P >> Select Armature Deform
+    >> With Automatic Weights**
+
+    This will add an Armature modifier to the mesh and add vertex weightings
+    automatically that help get you started.
+
+Blender Manual Link:
+    `Blender Manual | Armature Modifier <https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/armature.html>`_
 
 Vertex Groups
 -------------
+Binding vertices to bones in done via **Vertex Groups** you can create them
+in the |props_object_data| **Object Data Properties Panel**. To be able to
+bind vertices to specific bones you need to create a **Vertex Group with 
+the same name as the Bone in your Armature** for each Bone that should deform
+the mesh. (This can also be done automatically for you by using the hint above)
+
+.. image:: ../_static/images/bl_gui_vertex_groups.png
+
+You can add and remove Vertex Groups by pressing the **+** and **-** buttons on
+the top right of the **Vertex Groups Rollout**.
+Once you are in **Edit Mode** the GUI Elements at the bottom will be available.
+There you can **Assign or Remove a specific Weight to the currently selected Vertices**.
+
+.. |props_object_data| image:: ../_static/images/bl_gui_props_object_data.png
+
+Blender Manual Link:
+    `Blender Manual | Vertex Groups <https://docs.blender.org/manual/en/latest/modeling/meshes/properties/vertex_groups/introduction.html>`_
 
 Forward Kinematic / Inverse Kinematic (FK / IK)
 ===============================================
