@@ -88,13 +88,14 @@ tail**. A Bone rotates around its **head** and always points to its **tail**.
 
 **Armature Edit Mode Hotkeys:**
 
-=========================== ===========================================
+=========================== =============================================
 Hotkey                      Function
-=========================== ===========================================
+=========================== =============================================
 **E**                       Extrude Bone and form a chain
 **Alt + P**                 Unparent selected objects
 **Ctrl + P**                Set active bone as parent to selected bones
-=========================== ===========================================
+**Alt + F**                 Flip direction of selected bone (Head & Tail)
+=========================== =============================================
 
 With these tools we can build a hierarchy of bones consisting of **bone
 chains**.
@@ -103,6 +104,12 @@ chains**.
 
     Example of a bone hierarchy consiting of one root bone
     that acts as the parent of two separate bone chains.
+
+.. hint:: 
+    
+    While building a complex hierarchy we sometimes need to rename a lot of bones.
+    Luckily Blender has a batch rename tool that enables us to do just that.
+    It is accessible via the **Hotkey: Ctrl + F2**
 
 Blender Manual Link:
     `Blender Manual | Bones <https://docs.blender.org/manual/en/latest/animation/armatures/bones/introduction.html>`_
@@ -152,6 +159,73 @@ Blender Manual Link:
 
 Forward Kinematic / Inverse Kinematic (FK / IK)
 ===============================================
+When we construct a bone chain all its bones are in Forward Kinematic mode, 
+meaning to change the position of the last bone in the chain we have to 
+rotate all the bones prior until we get the desired position.
 
-Spline IK / Bendy Bones
-=======================
+This is useful in some and very cumbersome in other cases. That's why there
+is another mode of operation that's implemented with constraints called
+Inverse Kinematic. This Mode features an IK-Target which the whole bone 
+chain will point to. For example a characters arm can be made to grab or
+point at something by only moving the IK-Target and the bone chain will
+follow.
+
+.. raw:: html
+
+    <video controls src="../_static/videos/bl_3dview_ikchain_demo.mp4"></video>
+
+
+Bendy Bones
+===========
+Blender gives us the option to change simple normal bones into bendy bones. Bendy
+Bones are bones with additional subsegments that can create arcs and bend similar
+to a simple curve object when we change it's start and end point location.
+
+.. raw:: html
+
+    <video controls src="../_static/videos/bl_3dview_bendybones_demo.mp4"></video>
+
+
+We can enable Bendy bones by opening the **Bone Object Property Rollout** in the
+**Properties Panel** and changing the **Segments Parameter**.
+Additionally if we want to be able to control the bendy bones curve easily we can
+assign other bones as **custom Start and End Handle** at the bottom of the rollout.
+
+.. image:: ../_static/images/bl_gui_props_object_data_bone.png
+
+.. hint::
+    to be able to see the subsegments of the Bendy bones we have to change the 
+    Display Mode of our Armature to **B-Bone**
+
+    .. image:: ../_static/images/bl_gui_props_object_data_armature_bbone.png
+
+Rig Examples
+============
+
+FootRoll Leg Rig
+----------------
+Great for Humanoid characters that need a convenient to animate footroll mechanic.
+
+Download:
+    :download:`FootRoll-Rig Example <../_static/downloads/rig_example_foot.blend>`
+
+Bendy Bones IK Arm Rig
+----------------------
+Noodly Arm that can bend once driven by an IK Chain with Stretch and Bendy Bones
+
+Download:
+    :download:`Bendy Bones IK Arm Rig Example <../_static/downloads/rig_example_bendy_stretchy_IK_arm.blend>`
+
+Spline IK Arm Rig
+-----------------
+Noodly Arm that can bend in multiple different direction driven by a spline Curve.
+
+Download:
+    :download:`Spline IK Arm Rig Example <../_static/downloads/rig_example_splineIK_arm.blend>`
+
+Tank Treads Rig
+---------------
+Tank Treads Rig building on the Tank Tread tutorial from an earlier lesson
+
+Download:
+    :download:`Tank Treads Rig Example <../_static/downloads/rig_example_treads.blend>`
