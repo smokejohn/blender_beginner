@@ -157,6 +157,22 @@ There you can **Assign or Remove a specific Weight to the currently selected Ver
 Blender Manual Link:
     `Blender Manual | Vertex Groups <https://docs.blender.org/manual/en/latest/modeling/meshes/properties/vertex_groups/introduction.html>`_
 
+
+Showing Vertex weights on the Mesh
+----------------------------------
+To be able to see the influence of each bone on our mesh we have to enable some settings
+in our 3D Viewport. Once we have done that the bones influence on each vertex will be
+shown with a rainbow color gradient (0.0 = Black, 1.0 = Red).
+
+.. image:: ../_static/images/bl_gui_3dview_vertexweight_preview.png
+
+Turn on **Vertex Group Weights** in the **3D Views Overlay Menu** (Top Right) and
+**to make sure the Vertex Weight colors are clearly visible** set the **Viewport
+Shading Color** to **Object**
+
+.. image:: ../_static/images/bl_gui_3dview_overlays_vertexweights.png
+.. image:: ../_static/images/bl_gui_3dview_shading_color.png
+
 Forward Kinematic / Inverse Kinematic (FK / IK)
 ===============================================
 When we construct a bone chain all its bones are in Forward Kinematic mode, 
