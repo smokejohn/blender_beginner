@@ -191,6 +191,10 @@ follow.
     <video controls src="../_static/videos/bl_3dview_ikchain_demo.mp4"></video>
 
 
+Blender Manual Link:
+    * `Blender Manual | Inverse Kinematic <https://docs.blender.org/manual/en/latest/animation/constraints/tracking/ik_solver.html>`_
+    * `Blender Manual | Naming Conventions <https://docs.blender.org/manual/en/latest/animation/armatures/bones/editing/naming.html>`_
+
 Bendy Bones
 ===========
 Blender gives us the option to change simple normal bones into bendy bones. Bendy
