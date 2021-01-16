@@ -125,8 +125,9 @@ Blender Training:
     * `blendermarket.com <https://blendermarket.com/categories/video-tutorials>`_
     * `blendernation.com <https://www.blendernation.com/>`_
     * `cgcookie.com <https://cgcookie.com/>`_
-    * `blender cloud <https://cloud.blender.org/welcome/>`_
-    * `blender cloud animation fundamentals <https://cloud.blender.org/training/animation-fundamentals/>`_
+    * `Blender Cloud <https://cloud.blender.org/welcome/>`_
+    * `Blender Cloud | Animation Fundamentals <https://cloud.blender.org/training/animation-fundamentals/>`_
+    * `Youtube Learn | Grease Pencil <https://www.youtube.com/watch?v=9N-glGarYuM>`_
 
 Gameart / Gamedev:
     * `polycount.com <https://polycount.com/>`_
@@ -138,5 +139,6 @@ Porfolio websites:
     * `Behance <https://behance.net/>`_
     * `Deviant art <https://deviantart.com/>`_
 
-Misc:
+Lighting:
     * `Chris Brejon | CG Cinematography <https://chrisbrejon.com>`_
+    * `Safaribooks | Light - Science and Magic <https://learning.oreilly.com/library/view/light-science-and/9780240812250/>
