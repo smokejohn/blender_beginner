@@ -129,6 +129,10 @@ Blender Training:
     * `Blender Cloud | Animation Fundamentals <https://cloud.blender.org/training/animation-fundamentals/>`_
     * `Youtube Learn | Grease Pencil <https://www.youtube.com/watch?v=9N-glGarYuM>`_
 
+Training by industry professionals:
+    * `Concept Artist Jama Jurabaev | Blender <https://gumroad.com/jamajurabaev?sort=newest>`_
+    * `Gnomon Workshop <khttps://www.thegnomonworkshop.com>`_
+
 Gameart / Gamedev:
     * `polycount.com <https://polycount.com/>`_
     * `polycount wiki <http://wiki.polycount.com/wiki/Polycount>`_
@@ -141,4 +145,6 @@ Porfolio websites:
 
 Lighting:
     * `Chris Brejon | CG Cinematography <https://chrisbrejon.com>`_
-    * `Safaribooks | Light - Science and Magic <https://learning.oreilly.com/library/view/light-science-and/9780240812250/>
+    * `Safaribooks | Light - Science and Magic <https://learning.oreilly.com/library/view/light-science-and/9780240812250/>`_
+
+
