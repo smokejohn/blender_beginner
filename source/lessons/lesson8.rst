@@ -147,4 +147,8 @@ Lighting:
     * `Chris Brejon | CG Cinematography <https://chrisbrejon.com>`_
     * `Safaribooks | Light - Science and Magic <https://learning.oreilly.com/library/view/light-science-and/9780240812250/>`_
 
+Substance Designer:
+    * `Josh Lynch | Artstation <https://www.artstation.com/joshlynch>`_
+    * `Josh Lynch | GDC 2018 Middle-Earth:Shadow of War <https://www.youtube.com/watch?v=TeMCtK1llIM>`_
+    * `Substance Source <https://source.substance3d.com/>`_
 
