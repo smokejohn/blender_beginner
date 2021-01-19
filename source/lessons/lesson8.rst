@@ -34,7 +34,7 @@ Blender Manual Link:
 
 Animation Links:
     * `graphixly | 12 Principles of Animation <https://graphixly.com/blogs/news/12-principles-of-animation>`_
-    * `creativebloq | 12 Principles of Animation <>https://www.creativebloq.com/advice/understand-the-12-principles-of-animation`_
+    * `creativebloq | 12 Principles of Animation <https://www.creativebloq.com/advice/understand-the-12-principles-of-animation>`_
 
 Timeline / Dopesheet
 ====================
