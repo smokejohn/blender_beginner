@@ -152,3 +152,9 @@ Substance Designer:
     * `Josh Lynch | GDC 2018 Middle-Earth:Shadow of War <https://www.youtube.com/watch?v=TeMCtK1llIM>`_
     * `Substance Source <https://source.substance3d.com/>`_
 
+Sculpting:
+    * `ZbrushCentral <https://www.zbrushcentral.com/>`_
+    * `ZClassroom | Free ZBrush Training <http://pixologic.com/zclassroom/>`_
+    * `Ryan Kingslien | Sculpt Face using Ecorche <https://www.youtube.com/watch?v=gZEs5x9jL8E>`_ (Good Zbrush and general sculpting youtube channel)
+    * `Yan Sculpts | Blender sculpting youtube channel <https://www.youtube.com/c/yansculpts>`_
+
