@@ -1,5 +1,7 @@
 # Blender Beginner Script
 
+A built version of this script is hosted at [blenderbeginner.rtfd.io](https://blenderbeginner.readthedocs.io/en/latest/)
+
 ## Building
 
 ### Dependencies
